@@ -1,0 +1,65 @@
+
+@import "../styles/variables.scss";
+
+.portfolio-item-wrapper{
+    @include popover(below, $menu-background-color: #bdbdbd );
+    background-image: url("../helper/images/backgrounds/bookspine.png");
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    margin-top: 3vh;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    position: relative;
+    flex-direction: column-reverse;
+    align-self: flex-end;
+    @media only screen and (orientation: landscape){
+        width: 5%;
+    }
+};
+.preview-desc{
+    text-overflow: ellipsis;
+    overflow : hidden;
+};
+
+
+.volume-id{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    bottom: 60%;
+    color: slategray;
+    font-size: smaller;
+};
+
+.portfolio-item-name{
+    display: flex;
+    rotate: 90deg;
+    height: 10%;
+    max-width: 75%;
+    min-width: 75%;
+    font-size: small;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    color: slategray;
+    margin-left: 15%;
+    margin-bottom: 35%;
+};
+
+.portfolio-binder-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+
+.plaque-contents{
+    background-image: url("../helper/images/backgrounds/lightpencilbackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
+    font-weight: bold;
+    opacity: 0.75;   
+}

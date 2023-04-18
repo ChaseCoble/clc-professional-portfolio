@@ -1,0 +1,28 @@
+#root{
+    height: 100vh;
+    
+}
+#root-wrapper{
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    flex-direction: row;
+    height: 100%;
+}
+.container{
+    height: 100%;
+}
+#biography-blurb{
+    display: flex;
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw;
+}
+#nav-drop-holder{
+    display: flex;
+    width: 20vh;
+}

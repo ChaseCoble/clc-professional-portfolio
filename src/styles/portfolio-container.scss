@@ -1,0 +1,130 @@
+.shelf-hor{
+    display: flex;
+    background-image: url("../helper/images/backgrounds/woodgrainhorizontal.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3), 0px 0px 20px rgba(255,255,255,0);
+};
+.shelf-vert{
+    background-image: url("../helper/images/backgrounds/woodgrainvert.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+};
+.plaque{
+    display: flex;
+    background-image: url("../helper/images/backgrounds/plaque.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    place-self: center;
+    place-items: center;
+    max-width: 75%;
+    min-width: 25%;
+    max-height: 80%;
+    align-items: center;
+    justify-content: center;
+};
+.bookhole{
+  background-image: url("../helper/images/backgrounds/darkpencilbackground.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;  
+}
+#portfolio-wrapper{
+  width: 75%;
+  height: 80%;
+  @media only screen and (orientation: landscape){
+    width: 50%;
+  }
+}
+#portfolio-container-wrapper{
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 0.5fr 10fr 1fr;
+  height: 100%;
+  
+};
+#portfolio-container-topbar{
+    grid-area: 1 / 1 / 2 / 4;
+  };
+  #portfolio-title-placard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  };
+  #portfolio-sidebar-left{
+    display: grid;
+    grid-area: 2 / 1 / 10 / 2;
+  };
+  #portfolio-sidebar-right{
+    display: grid;
+    grid-area: 2 / 3 / 10 / 4;
+  };
+  #portfolio-body{
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr 4fr 1fr 4fr 1fr 4fr;
+    height: 100%;
+  };
+  #portfolio-bookhole-1{
+    display: grid;
+    grid-area: 1 / 1 / 2 / 2;
+  };
+  #portfolio-body-rail-1{
+    display: flex;
+    grid-area: 2 / 1 / 3 / 2;
+  };
+  #portfolio-bookhole-2{
+    display: grid;
+    grid-area: 3 / 1 / 4 / 2;
+  };
+  #portfolio-body-rail-2{
+    grid-area: 4 / 1 / 5 / 2;
+  
+  };
+  #portfolio-bookhole-3{
+    grid-area: 5 / 1 / 6 / 2;
+  };
+  #portfolio-body-rail-3{
+    grid-area: 6 / 1 / 7 / 2;
+  };
+  #portfolio-bookhole-4{
+    grid-area: 7 / 1 / 8 / 2;
+  };
+  #portfolio-container-bottombar{
+    grid-area: 3 / 2 / 4 / 3;
+    height: 100%;
+  };
+  .React{
+    grid-area: 1 / 1 / 2 / 2;
+  }   
+  .Python{
+    grid-area: 3 / 1 / 4 / 2;
+  }; 
+  .Projects{
+    grid-area: 5 / 1 / 6 / 2;
+  };
+  .Hobbies{
+    grid-area: 7 / 1 / 8 / 2;
+  };
+
+  #portfolio-fork-wrapper{
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }

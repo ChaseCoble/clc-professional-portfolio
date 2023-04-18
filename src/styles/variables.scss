@@ -1,0 +1,194 @@
+@mixin popover(
+  $menu-position         : below,              
+  $menu-width            : 200,              
+  $menu-background-color : rgb( 255,255,255 ), 
+  $nubbin-size           : 10,               
+  $menu-hidden-distance  : 20,               
+  $menu-shadow-color     : rgba(0,0,0,0.3),    
+  $menu-border-radius    : 0,                 
+  $is-menu               : true                
+  ) {
+  display: inline-block;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    > .menu {
+      @extend .menu-show;
+      @if $menu-position == above {
+        top: 0;
+      }
+      @if $menu-position == below {
+        bottom: 0;
+        right: calc(-1 * $menu-width)px;
+      }
+      @if $menu-position == left {
+        left: 0;
+      }
+      @if $menu-position == right {
+        right: calc(-1 * $menu-width)px;
+      }
+    }
+  }
+  .menu-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu {
+    width: ($menu-width)px;
+    @extend .menu-hidden;
+    position: absolute;
+    z-index: 2;
+    @if $menu-position == above {
+      padding-bottom: ($nubbin-size)px;
+      top: (0 - $menu-hidden-distance)px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+    @if $menu-position == below {
+      padding-top: ($nubbin-size)px;
+      bottom: (0 - $menu-hidden-distance)px;
+      left: 50%;
+      transform: translate( -50%, 100% );
+      right: (-1 * ($menu-width + $nubbin-size) - $menu-hidden-distance)px;
+    }
+    @if $menu-position == left {
+      padding-right: ($nubbin-size)px;
+      top: 50%;
+      left: (0 - $menu-hidden-distance)px;
+      transform: translate( -100%, -50%);
+    }
+    @if $menu-position == right {
+      padding-left: ($nubbin-size)px;
+      top: 50%;
+      right: (-1 * ($menu-width + $nubbin-size) - $menu-hidden-distance)px;
+      transform: translate(0,-50%);
+    }
+    &:hover > .menu-content {
+      @if $is-menu == true {
+        box-shadow: 0 8px 12px 5px lighten( ($menu-shadow-color), 40% );
+      }
+      @else {
+        box-shadow: none;
+      }
+    } 
+    .menu-content:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-width: ($nubbin-size + 2)px;
+      border-style: solid;
+      position: absolute;
+      @if $menu-position == above {
+        bottom: -2px;
+        left: calc($menu-width / 2)px;
+        margin-left: calc(($nubbin-size + 2)*-1)px;
+        border-top-color: lighten($menu-shadow-color, 70%);
+        border-right-color: transparent;
+        border-bottom-width: 0;
+        border-left-color: transparent;  
+      }
+      @if $menu-position == below {
+        top: -2px;
+        left: calc( $menu-width / 2 )px;
+        margin-left: calc(-1*($nubbin-size + 2))px;
+        border-top-width: 0;
+        border-right-color: transparent;
+        border-bottom-color: lighten($menu-shadow-color, 70%);
+        border-left-color: transparent; 
+      }
+      @if $menu-position == left {
+        top: 50%;
+        right: -2px;
+        margin-top: calc(-1*$nubbin-size - 2)px;
+        border-top-color: transparent;
+        border-right-width: 0;
+        border-bottom-color: transparent;
+        border-left-color: lighten($menu-shadow-color, 70%); 
+      }
+      @if $menu-position == right {
+        top: 50%;
+        left: -2px;
+        margin-top: calc(-1* $nubbin-size - 2)px;
+        border-top-color: transparent;
+        border-right-color: lighten($menu-shadow-color, 70%);
+        border-bottom-color: transparent;
+        border-left-width: 0;
+      }
+    }
+    .menu-content:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-width: ($nubbin-size)px;
+      border-style: solid;
+      position: absolute;
+      @if $menu-position == above {
+        bottom: 0;
+        left: calc( $menu-width / 2 )px;
+        margin-left: (-1 * $nubbin-size)px;
+        border-top-color: $menu-background-color;
+        border-right-color: transparent;
+        border-bottom-width: 0;
+        border-left-color: transparent;  
+      }
+      @if $menu-position == below {
+        top: 0;
+        left: calc($menu-width / 2)px;
+        margin-left: (-1 * $nubbin-size)px;
+        border-top-width: 0;
+        border-right-color: transparent;
+        border-bottom-color: $menu-background-color;
+        border-left-color: transparent; 
+      }
+      @if $menu-position == left {
+        top: 50%;
+        right: 0;
+        margin-top: (-1 * $nubbin-size)px;
+        border-top-color: transparent;
+        border-right-width: 0;
+        border-bottom-color: transparent;
+        border-left-color: $menu-background-color; 
+      }
+      @if $menu-position == right {
+        top: 50%;
+        left: 0;
+        margin-top: (-1 * $nubbin-size)px;
+        border-top-color: transparent;
+        border-right-color: $menu-background-color;
+        border-bottom-color: transparent;
+        border-left-width: 0;
+      }
+    }
+    .menu-content {
+      margin: 0;
+      padding: 5px;
+      list-style: none;
+      line-height: 1.4rem;
+      background-color: $menu-background-color;
+      box-shadow: 0 0 2px 0 $menu-shadow-color;
+      border-radius: $menu-border-radius;
+      transition: all 0.3s ease-in-out;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          &:first-child {
+            border-top-left-radius: $menu-border-radius;
+            border-top-right-radius: $menu-border-radius;
+          }
+          &:last-child {
+            border-bottom-left-radius: $menu-border-radius;
+            border-bottom-right-radius: $menu-border-radius;
+          }
+        }
+      }
+    }
+  }
+}
+
