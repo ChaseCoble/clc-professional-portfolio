@@ -36,7 +36,7 @@ export default function PortfolioItem(props) {
   console.log(name)
 
   
-  
+  const briefDescription = description.substring(0, description.indexOf('.'));
   const nameFormatter = (name) => {
     let nameClip = '';
     name = name.split(' ').join('\u00b7')
@@ -85,7 +85,7 @@ export default function PortfolioItem(props) {
             <img className="preview-image" alt= "imagethumb" src={thumb_image_url} />
           </div>
           <div className="preview-desc">
-            <p>{description}</p>
+            <p>{briefDescription}</p>
           </div>
         </div>
       </div>
