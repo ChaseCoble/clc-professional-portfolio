@@ -1,0 +1,17 @@
+.mobile-top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#mobile-logo{
+    filter: grayscale(1);
+    width: 25%;
+    margin: 3%;
+}
+.mob-nav-link{
+    border: 1px solid black;
+    padding: 2%;
+    margin: 1%;
+    color: black;
+    box-shadow: -3px 10px 5px 0px rgba(0,0,0,0.75);
+}

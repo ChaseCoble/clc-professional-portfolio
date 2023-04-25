@@ -11,3 +11,8 @@ html{
 body{
     height: 100%;
 }
+
+.blur{
+    transition: 1s;
+    filter: brightness(10%);
+}

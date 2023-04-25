@@ -34,29 +34,38 @@
     justify-content: center;
 };
 .bookhole{
+  display: flex;
   background-image: url("../helper/images/backgrounds/darkpencilbackground.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;  
+  border: 1px dotted black;
 }
 #portfolio-wrapper{
-  width: 75%;
-  height: 80%;
-  @media only screen and (orientation: landscape){
-    width: 50%;
-  }
+  display:flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  grid-area: 2/2/3/3;
 }
 #portfolio-container-wrapper{
   display: grid;
-  width: 100%;
+  width: 75%;
   align-items: center;
   justify-content: center;
   grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 0.5fr 10fr 1fr;
   height: 100%;
-  
+  border: 1px solid black;
+  @media only screen and (max-aspect-ratio : 1.05){
+    grid-template-columns: 1fr 22fr 1fr;
+    grid-template-rows : 1fr 34fr 1.5fr;
+    height: 100%;
+    width: 80%;
+  }
 };
 #portfolio-container-topbar{
     grid-area: 1 / 1 / 2 / 4;
@@ -80,9 +89,12 @@
     grid-template-columns: 1fr;
     grid-template-rows: 4fr 1fr 4fr 1fr 4fr 1fr 4fr;
     height: 100%;
-  };
+    @media only screen and (max-aspect-ratio: 1.05){
+      grid-template-rows: 8fr 1fr 8fr 1fr 8fr 1fr 8fr;
+    }
+};
   #portfolio-bookhole-1{
-    display: grid;
+    display: flex;
     grid-area: 1 / 1 / 2 / 2;
   };
   #portfolio-body-rail-1{
@@ -90,23 +102,28 @@
     grid-area: 2 / 1 / 3 / 2;
   };
   #portfolio-bookhole-2{
-    display: grid;
+    display: flex;
     grid-area: 3 / 1 / 4 / 2;
   };
   #portfolio-body-rail-2{
+    display: flex;
     grid-area: 4 / 1 / 5 / 2;
   
   };
   #portfolio-bookhole-3{
+    display: flex;
     grid-area: 5 / 1 / 6 / 2;
   };
   #portfolio-body-rail-3{
+    display: flex;
     grid-area: 6 / 1 / 7 / 2;
   };
   #portfolio-bookhole-4{
+    display: flex;
     grid-area: 7 / 1 / 8 / 2;
   };
   #portfolio-container-bottombar{
+    display: flex;
     grid-area: 3 / 2 / 4 / 3;
     height: 100%;
   };
@@ -124,7 +141,9 @@
   };
 
   #portfolio-fork-wrapper{
-    display: flex;
+    display:flex;
     height: 100%;
     width: 100%;
+    align-items: flex-start;
+    justify-content: center;
   }

@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PortfolioItem from "./PortfolioItem";
+import LoadingScreen from "../loading";
+import MobilePortfolio from "../mobileOnly/portfolio/MobilePortfolio"
+import { mobContext } from "../../index";
 
 export default function PortfolioContainer() {
     console.log("Portfolio Container mounted")
     const [portfolioItems, setPortfolioItems] = useState();
     const [isLoading, setIsLoading] = useState(true);
-    
+    const isMob = useContext(mobContext);
+    const mobTag = (isMob === true) ? "-mobile" : "";
+
     useEffect(() => {
       const fetchPortfolioItems = async () => {
         try {
@@ -33,7 +38,6 @@ export default function PortfolioContainer() {
       var leftMarginConstant = 0;
       var volId = 0;
       for (let portfolioItem of portfolioItems) {
-        console.log(`"Switch initiated on" ${portfolioItem} testing ${portfolioItem.category}`)
         switch(portfolioItem.category) {
           case "React":            
             leftMarginConstant = reactComparator;
@@ -76,45 +80,48 @@ export default function PortfolioContainer() {
   }
 
   return (
-    <div id = "portfolio-fork-wrapper">
-      {isLoading === false ? 
-      <div id = "portfolio-container-wrapper">
-        <div id = "portfolio-container-topbar" className = "shelf-hor">
-          <div id = "portfolio-title-placard" className = "plaque">
-            <div className = 'plaque-contents'>My Portfolio </div>
-          </div> 
-        </div>
-        <div id = "portfolio-sidebar-left" className = "shelf-vert"  />
-        <div id = "portfolio-sidebar-right" className = "shelf-vert" />
-        <div id = "portfolio-body">
-          <div id = "portfolio-body-rail-1" className = "shelf-hor">
-            <div id = "portfolio-body-rail-1-plaque" className = "plaque">
-              <div className = "plaque-contents">React</div>
+    <div id={`portfolio-fork-wrapper${mobTag}`}>
+  {isLoading === false
+    ? isMob === false
+      ? <div id="portfolio-container-wrapper">
+          <div id="portfolio-container-topbar" className="shelf-hor">
+            <div id="portfolio-title-placard" className="plaque">
+              <div className='plaque-contents'>My Portfolio </div>
             </div> 
           </div>
-          <div id = "portfolio-body-rail-2" className = "shelf-hor">
-            <div id = "portfolio-body-rail-2-plaque" className = "plaque">
-              <div className = "plaque-contents">Python</div>
+          <div id="portfolio-sidebar-left" className="shelf-vert" />
+          <div id="portfolio-sidebar-right" className="shelf-vert" />
+          <div id="portfolio-body">
+            <div id="portfolio-body-rail-1" className="shelf-hor">
+              <div id="portfolio-body-rail-1-plaque" className="plaque">
+                <div className="plaque-contents">React</div>
+              </div> 
             </div>
-          </div>
-          <div id = "portfolio-body-rail-3" className = "shelf-hor">
-            <div id = "portfolio-body-rail-3-plaque" className = "plaque">
-              <div className = "plaque-contents">Projects</div>
+            <div id="portfolio-body-rail-2" className="shelf-hor">
+              <div id="portfolio-body-rail-2-plaque" className="plaque">
+                <div className="plaque-contents">Python</div>
+              </div>
             </div>
+            <div id="portfolio-body-rail-3" className="shelf-hor">
+              <div id="portfolio-body-rail-3-plaque" className="plaque">
+                <div className="plaque-contents">Projects</div>
+              </div>
+            </div>
+            <div id="portfolio-bookhole-1" className="bookhole React" />
+            <div id="portfolio-bookhole-2" className="bookhole Python" />
+            <div id="portfolio-bookhole-3" className="bookhole Project" />
+            <div id="portfolio-bookhole-4" className="bookhole Hobbies" />
+            {getPortfolioItems()}
           </div>
-          <div id = "portfolio-bookhole-1" className = "bookhole React" />
-          <div id = "portfolio-bookhole-2" className = "bookhole Python" />
-          <div id = "portfolio-bookhole-3" className = "bookhole Project" />
-          <div id = "portfolio-bookhole-4" className = "bookhole Hobbies" />
-          {getPortfolioItems()}
+          <div id="portfolio-container-bottombar" className="shelf-hor">
+            <div id="portfolio-body-4-placard" className="plaque">
+              <div className="plaque-contents">Hobbies</div>
+            </div>
+          </div> 
         </div>
-        <div id = "portfolio-container-bottombar" className = "shelf-hor">
-          <div id = "portfolio-body-4-placard" className = "plaque">
-            <div className = "plaque-contents">Hobbies</div>
-          </div>
-        </div> 
-      </div>
-    : <div> Loading ... </div> }
-    </div>
+      : <MobilePortfolio items = {portfolioItems} />
+    : <LoadingScreen />
+  }
+</div>
   )
 }

@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 
 export default function PortfolioItem(props) {
+  const { name, description, url, category, thumb_image_url, volId, leftMarginConstant, logo_url } = props.item;
   console.log("portfolio item mounted");
   console.log("portfolio item", props.item)
   const [isOpen, setIsOpen] = useState(false);
-  const mediaMatch = window.matchMedia('(orientation : portrait)')
+  const mediaMatch = window.matchMedia('(max-aspect-ratio : 1.05 )')
   const [matches, setMatches ] = useState(mediaMatch.matches);
   useEffect(() => {
     const handler = e => setMatches(e.matches);
@@ -15,18 +16,18 @@ export default function PortfolioItem(props) {
   function orientationQuery() {
     if (matches === true) {
       const portraitStyle = {
-        marginLeft: `${leftMarginConstant * 5}%`
+        marginLeft: `${leftMarginConstant * 9}%`
       }
       return portraitStyle;
     } else {
       const landscapeStyle = {
-        marginLeft: `${leftMarginConstant * 5}%`,
+        marginLeft: `${leftMarginConstant * 7}%`,
         borderLeft: '1px dotted black'
       }
       return landscapeStyle;
     }
   }
-  const { name, description, category, thumb_image_url, volId, leftMarginConstant } = props.item;
+  
   console.log(volId, leftMarginConstant)
   const volumeId = volId;
   const romans = require("romans");
@@ -100,8 +101,16 @@ export default function PortfolioItem(props) {
         role="See More Information"
       >
             <div className="portfolio-item-toprow">
-                <div className = "portfolio-item-name">
+                <div className = "name-url-wrapper">
+                  <div className = "portfolio-item-name">
                     <h1>{name}</h1>
+                  </div>
+                  <div className = "portfolio-item-url">
+                    <a href={url}>Project Link</a>
+                  </div>
+                  <div className = "portfolio-repo-url">
+                    <a href={logo_url}>Repository Link</a>
+                  </div>
                 </div>
                 <div className = "portolio-item-modal-exit">
                     <p onClick= {closeModal} class = "clickable"> Return to home screen </p>

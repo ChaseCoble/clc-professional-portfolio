@@ -1,0 +1,57 @@
+#root-content-wrapper-mobile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#biography-blurb-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    grid-area: 1/1/2/2;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    img{
+        width: 75%;
+        filter: grayscale(1);
+        opacity: 0.85;
+        margin: 10%;
+    }
+
+}
+#mobile-portfolio-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+}
+.mobile-portfolio-items-wrapper{
+    grid-area: 2/1/3/3;
+    overflow: auto;
+}
+.mobile-filter-button-wrapper{
+    grid-area: 1/1/2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;;
+}
+.mobile-portfolio-item{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 25%;
+    width: 100%;
+}
+
+.img-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
