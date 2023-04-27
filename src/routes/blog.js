@@ -1,10 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import TopBar from "../components/topbar/TopBar";
 import BlogItem from "../components/blog/blogItem";
+import LoadingScreen from "../components/loading";
+import { mobContext } from "../index";
+import MobileBlog from "../components/mobileOnly/blog/MobileBlog";
 
 export default function Blog() {
     const [blogItems, setBlogItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const isMob = useContext(mobContext);
     useEffect(() => {
         const fetchBlogItems = async () => {
           try {
@@ -86,12 +90,22 @@ export default function Blog() {
             (blogItem.blog_status === 'published') ? <BlogItem key = {blogItem.id} item = {blogItem} /> : null
         ))
   }  
-    return(
-        <div id = "blog-wrapper">
+  return (
+    <div id="blog-wrapper">
+      {isLoading === false ? (
+        isMob ? (
+          <MobileBlog items={blogItems} />
+        ) : (
+          <>
             <TopBar/>
-            <div id = "blog-content-wrapper">
-                {getBlogItems()}
+            <div id="blog-content-wrapper">
+              {getBlogItems()}
             </div>
-        </div>
-    )
+          </>
+        )
+      ) : (
+        <LoadingScreen/>
+      )}
+    </div>
+  );
 }

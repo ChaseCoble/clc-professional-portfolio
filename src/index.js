@@ -1,14 +1,19 @@
-import React, {createContext, useContext} from 'react';
+import React, {createContext} from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/main.scss';
 import Root from './routes/root';
 import Blog from './routes/blog';
-import ContentManager from './routes/contentManager';
-import Auth from "./components/auth"
+import AuthenticationHOC from './routes/authenticationHOC';
 import About from './routes/about';
 import Error from './routes/error';
 import MobilePortfolioDetail from './routes/MobilePortfolioDetail'
+import ReactModal from 'react-modal';
+import MobileBlogDetail from './routes/MobileBlogDetail';
+import MobileContact from './routes/mobileContact';
+import UnderConstruction from './components/underConstruction';
+
+ReactModal.setAppElement('#root');
 
 function IsMobile() {
   var height = window.innerHeight;
@@ -23,7 +28,7 @@ function IsMobile() {
       return false;
   }
 }
-const authContext = createContext(false);
+
 const mobContext = createContext(IsMobile());
 const router = createBrowserRouter([
   {
@@ -35,8 +40,12 @@ const router = createBrowserRouter([
     element: <Blog/>
   },
   {
-    path: "/login",
-    element: <authContext.Provider value={false}><Auth/></authContext.Provider>
+    path: "/m/contact",
+    element: <MobileContact/>
+  },
+  {
+    path: "/auth/:fork",
+    element: <AuthenticationHOC/>
   },
   {
     path: "/about",
@@ -47,16 +56,15 @@ const router = createBrowserRouter([
     element: <MobilePortfolioDetail/>
   },
   {
-    path: "*",
-    element: <Error />
+    path: "/m/blog/:id",
+    element: <MobileBlogDetail/>
   },
   {
-    path: "/management",
-    element: <authContext.Provider value={false}><ContentManager/></authContext.Provider>
+    path: "*",
+    element: <Error />
   }
 ]);
 
-console.log(authContext, mobContext);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -64,4 +72,4 @@ root.render(
   </React.StrictMode>
 );
 
-export {authContext, mobContext};
+export {mobContext};

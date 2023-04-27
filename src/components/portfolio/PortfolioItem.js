@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function PortfolioItem(props) {
   const { name, description, url, category, thumb_image_url, volId, leftMarginConstant, logo_url } = props.item;
@@ -62,7 +65,7 @@ export default function PortfolioItem(props) {
     setIsOpen(true);
   };
 
-
+  
 
   const closeModal = () => {
     setIsOpen(false);
@@ -113,7 +116,7 @@ export default function PortfolioItem(props) {
                   </div>
                 </div>
                 <div className = "portolio-item-modal-exit">
-                    <p onClick= {closeModal} class = "clickable"> Return to home screen </p>
+                    <a style={{color: 'inherit'}} onClick = {closeModal} className = "clickable" href=""><FontAwesomeIcon icon={faXmarkSquare}  /></a>
                 </div>
             </div>
             <div className="portfolio-thumb-wrapper">

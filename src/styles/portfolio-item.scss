@@ -15,10 +15,8 @@
     position: relative;
     flex-direction: column-reverse;
     align-self: flex-end;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
     @media only screen and (max-aspect-ratio: 1.05){
-        height: 90%;
+        height: 95%;
         width: 9%;
     }
 };
@@ -64,4 +62,7 @@
     background-size: fill;
     font-weight: bold;
     opacity: 0.75;   
+}
+.Hobbies{
+    @include popover(above, $menu-background-color: #bdbdbd );
 }

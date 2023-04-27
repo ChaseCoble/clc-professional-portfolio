@@ -1,16 +1,16 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Error() {
-    
+    const navigate = useNavigate();
     const handleOnClick = () => {
-        <Navigate replace to = "/" />
+        navigate("/");
     }
     
     return (
         <div id = "error-wrapper">
             You have messed up! Turn around!
-            <button onClick = {handleOnClick()}> Return to Home </button>
+            <button onClick = {handleOnClick}> Return to Home </button>
         </div>
     )
 }

@@ -10,6 +10,10 @@
     justify-content: center;
     color: black;
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3), 0px 0px 20px rgba(255,255,255,0);
+    opacity: 0.85;
+    @media only screen and (max-aspect-ratio: 1.05){
+      opacity: 1;
+    }
 };
 .shelf-vert{
     background-image: url("../helper/images/backgrounds/woodgrainvert.jpg");
@@ -18,6 +22,10 @@
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    opacity: 0.85;
+    @media only screen and (max-aspect-ratio: 1.05){
+      opacity: 1;
+    }
 };
 .plaque{
     display: flex;
@@ -59,12 +67,12 @@
   grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 0.5fr 10fr 1fr;
   height: 100%;
-  border: 1px solid black;
+  border: 1px solid #b3b3b3;
   @media only screen and (max-aspect-ratio : 1.05){
     grid-template-columns: 1fr 22fr 1fr;
     grid-template-rows : 1fr 34fr 1.5fr;
     height: 100%;
-    width: 80%;
+    width: 90%;
   }
 };
 #portfolio-container-topbar{

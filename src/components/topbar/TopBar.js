@@ -5,11 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
 import { faMessage } from "@fortawesome/free-solid-svg-icons/faMessage";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
+import { useNavigate } from "react-router-dom";
 
 export default function TopBar() {
+    const navigate = useNavigate();
+    function handleLogoClick(){
+        navigate("/");
+    }
     return (
         <div id="top-bar-wrapper" className="theme1">
-            <div id="logo-wrapper\"><img src={logoSrc} alt="Coble X Development" id='logo' data-tooltip="Coble X Development" data-tooltip-conf="right" /></div>
+            <div id="logo-wrapper" className = "clickable" onClick = {handleLogoClick}><img src={logoSrc} alt="Coble X Development" id='logo' data-tooltip="Coble X Development" data-tooltip-conf="right" /></div>
             <div id="identification-blurb">
                 <p id="name-tag">Chase Coble</p>
                 <div className="contact-link">

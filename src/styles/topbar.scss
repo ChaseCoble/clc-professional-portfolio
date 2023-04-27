@@ -6,9 +6,6 @@
     align-items: center;
     margin-top: 1%;
     font-family: "Shadows into Light", cursive;
-    @media only screen and (max-aspect-ratio : 1.05){
-        border: 2px solid red;
-    }
 }
 #logo{
     width: 37%;
@@ -75,4 +72,7 @@
 }
 #name-tag{
     font-size: x-large;
+    @media only screen and (max-aspect-ratio: 1.05){
+        margin-bottom: 0;
+    }
 }

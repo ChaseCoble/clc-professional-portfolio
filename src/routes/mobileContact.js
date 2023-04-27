@@ -11,14 +11,14 @@ export default function MobileContact(){
                 <p id="name-tag">Chase Coble</p>
                 <div className="contact-link">
                     <div className="icon-wrapper">
-                        <FontAwesomeIcon icon={faPhone} className="clickable icon" href="tel:7852898817" />
-                        <FontAwesomeIcon icon={faMessage} className="clickable icon" href="sms:7852898817" />
+                        <a className="clickable" style={{color: 'inherit'}} href="tel:7852898817"><FontAwesomeIcon icon={faPhone} /></a>
+                        <a className="clickable" href="sms:7852898817" style={{color: 'inherit'}}><FontAwesomeIcon icon={faMessage}  /></a>
                     </div>
                     <p>785-289-8817</p>
                 </div>
                 <div className="contact-link">
                     <div className="icon-wrapper">
-                        <FontAwesomeIcon icon={faEnvelope} className="clickable icon" href="mailto:coblexdevelopment@gmail.com" />
+                        <a className="clickable" href="mailto:coblexdevelopment@gmail.com" style={{color: 'inherit'}}><FontAwesomeIcon icon={faEnvelope}/></a> 
                     </div>
                     <p>coblexdevelopment@gmail.com</p>
                 </div>
