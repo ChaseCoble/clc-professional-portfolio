@@ -5,7 +5,6 @@ import MobilePortfolio from "../mobileOnly/portfolio/MobilePortfolio"
 import { mobContext } from "../../index";
 
 export default function PortfolioContainer() {
-    console.log("Portfolio Container mounted")
     const [portfolioItems, setPortfolioItems] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const isMob = useContext(mobContext);
@@ -29,7 +28,6 @@ export default function PortfolioContainer() {
       fetchPortfolioItems();
     }, []);
     
-    console.log("state call", portfolioItems, isLoading)
     function getPortfolioItems() {
       var reactComparator = 0;
       var pythonComparator = 0;
@@ -70,7 +68,6 @@ export default function PortfolioContainer() {
           default: console.log("Error modifying properties on portfolioItems", portfolioItems)
 
         }
-        console.log("modified", portfolioItems); 
       }
       
       return (

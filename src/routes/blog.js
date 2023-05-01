@@ -26,7 +26,6 @@ export default function Blog() {
         };
         fetchBlogItems();
       }, []);
-      console.log(blogItems)
       function getBlogItems() {
         const restrictedArray = [];
         function getRandomInt(max){
@@ -51,8 +50,6 @@ export default function Blog() {
           
           let angle = "";
           const angleInt = getRandomInt(6);
-          console.log(angleInt);
-          console.log(restrictedArray)
           switch(angleInt){          
             case 0: 
               angle = 45;

@@ -21,7 +21,6 @@ export default function Login(){
     }
     const handleSubmit = async(event) => {
         event.preventDefault();
-        console.log(value.email, value.password);
         try {
             const response = await fetch('https://api.devcamp.space/sessions', {
               method: 'POST',

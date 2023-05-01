@@ -8,7 +8,6 @@ export default function MobilePortfolioDetail() {
     const [portfolioItem, setPortfolioItem] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const { id } = useParams();
-    console.log("mobile portfolio detail mounted");
     
     const fetchPortfolioItem = useCallback(async () => {
         try {
@@ -18,13 +17,12 @@ export default function MobilePortfolioDetail() {
                 cache: "no-cache"
         });
         const data = await response.json();
-        console.log("portfolio item data" + {portfolioItem})
         setPortfolioItem(data.portfolio_item);
         setIsLoading(false);
             } catch (error) {
              console.error(error);
         }
-    }, [id, portfolioItem])
+    }, [id])
     useEffect(() => {
         
     fetchPortfolioItem();

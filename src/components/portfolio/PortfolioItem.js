@@ -6,8 +6,6 @@ import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function PortfolioItem(props) {
   const { name, description, url, category, thumb_image_url, volId, leftMarginConstant} = props.item;
-  console.log("portfolio item mounted");
-  console.log("portfolio item", props.item)
   const [isOpen, setIsOpen] = useState(false);
   const mediaMatch = window.matchMedia('(max-aspect-ratio : 1.05 )')
   const [matches, setMatches ] = useState(mediaMatch.matches);
@@ -31,12 +29,9 @@ export default function PortfolioItem(props) {
     }
   }
   
-  console.log(volId, leftMarginConstant)
   const volumeId = volId;
   const romans = require("romans");
-  console.log("Id to be romanized", volumeId)
   const romanVolumeId = romans.romanize(volumeId);
-  console.log(name)
 
   
   const briefDescription = description.substring(0, description.indexOf('.'));
@@ -49,7 +44,6 @@ export default function PortfolioItem(props) {
         const repetitionConstant = 8 - name.length;
       if (name.length % 2 === 0) {
       nameClip = '\u00b7'.repeat(repetitionConstant / 2) + name + '\u00b7'.repeat(repetitionConstant / 2);
-      console.log(nameClip)
       } else {
       nameClip = '\u00b7'.repeat(Math.floor(repetitionConstant / 2 + 0.5)) + name + '\u00b7'.repeat(repetitionConstant / 2 - 0.5);
       }

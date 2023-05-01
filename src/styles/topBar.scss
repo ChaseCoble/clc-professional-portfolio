@@ -29,6 +29,7 @@
     margin: 20%;
     margin-bottom: 20%;
     flex-direction: column;
+    padding-top: 8%;
     @media only screen and (max-aspect-ratio : 1.05){
         margin-left: 0%;
     }
@@ -76,4 +77,5 @@
 #name-tag{
     font-size: x-large;
     margin-bottom: 0;
+    
 }
