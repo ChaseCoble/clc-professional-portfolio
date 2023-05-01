@@ -33,6 +33,7 @@ export default function MobilePortfolio(props) {
 
   return (
     <div id="mobile-portfolio-wrapper">
+      <div className="mobile-portfolio-header plaque">My Portfolio</div>
       <div className="mobile-filter-button-wrapper">
         <button
           className="btn filter-button"

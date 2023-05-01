@@ -26,15 +26,15 @@ export default function MobilePortfolioDetail() {
         }
       };
     fetchPortfolioItem();
-      }, [id]);
-    const {name, url, logo_url, description, thumb_image_url} = portfolioItem || {};
+      }, []);
+    const {name, url, description, thumb_image_url} = portfolioItem || {};
     return(
         <div className = "mobile-portfolio-detail-fork-wrapper">
             {isLoading === false ? (
             <div className = "mobile-portfolio-detail-wrapper">
                 <MobileTopBar />
                 <div id="mobile-portfolio-detail-content-wrapper">
-                    <div className="mobile-portfolio-item-left">
+                    <div className="mobile-portfolio-item-top">
                         <div className = "mobile-name-url-wrapper">
                             <div className = "mobile-portfolio-item-name">
                                 <h1>{name}</h1>
@@ -42,16 +42,13 @@ export default function MobilePortfolioDetail() {
                             <div className = "mobile-portfolio-item-url">
                                 <a href={url}>Project Link</a>
                             </div>
-                            <div className = "mobile-portfolio-repo-url">
-                                <a href={logo_url}>Repository Link</a>
-                            </div>
-                        </div>
-                        <div className="portfolio-item-content">
-                            <p> {description} </p>
-                        </div>
+                        </div>     
                     </div>
-                    <div className="mobile-portfolio-item-right">
-                        <img alt = "Website screenshot" src={thumb_image_url} />
+                    <div className="mobile-portfolio-item-picture">
+                    <a href = {thumb_image_url} className = "clickable"><img alt = "Website screenshot" src={thumb_image_url} /></a>
+                    </div>
+                    <div className="mobile-portfolio-description">
+                        <p> {description} </p>
                     </div>
                 </div>
             </div> 

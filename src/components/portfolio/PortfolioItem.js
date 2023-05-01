@@ -5,7 +5,7 @@ import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function PortfolioItem(props) {
-  const { name, description, url, category, thumb_image_url, volId, leftMarginConstant, logo_url } = props.item;
+  const { name, description, url, category, thumb_image_url, volId, leftMarginConstant} = props.item;
   console.log("portfolio item mounted");
   console.log("portfolio item", props.item)
   const [isOpen, setIsOpen] = useState(false);
@@ -105,18 +105,15 @@ export default function PortfolioItem(props) {
       >
             <div className="portfolio-item-toprow">
                 <div className = "name-url-wrapper">
-                  <div className = "portfolio-item-name">
+                  <div className = "portfolio-item-modal-name">
                     <h1>{name}</h1>
                   </div>
                   <div className = "portfolio-item-url">
                     <a href={url}>Project Link</a>
                   </div>
-                  <div className = "portfolio-repo-url">
-                    <a href={logo_url}>Repository Link</a>
-                  </div>
                 </div>
-                <div className = "portolio-item-modal-exit">
-                    <a style={{color: 'inherit'}} onClick = {closeModal} className = "clickable" href=""><FontAwesomeIcon icon={faXmarkSquare}  /></a>
+                <div className = "portfolio-item-modal-exit">
+                    <a style={{color: 'inherit'}} onClick = {closeModal} className = "clickable" href="/"><FontAwesomeIcon icon={faXmarkSquare}  /></a>
                 </div>
             </div>
             <div className="portfolio-thumb-wrapper">

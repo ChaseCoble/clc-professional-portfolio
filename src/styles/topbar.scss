@@ -61,7 +61,10 @@
 }
 .contact-link{
     display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Shadows into Light', cursive;
+    width: 50%;
     p{
         margin: 5%;
     }
@@ -72,7 +75,5 @@
 }
 #name-tag{
     font-size: x-large;
-    @media only screen and (max-aspect-ratio: 1.05){
-        margin-bottom: 0;
-    }
+    margin-bottom: 0;
 }

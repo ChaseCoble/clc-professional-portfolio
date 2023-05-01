@@ -1,0 +1,47 @@
+.mobile-blog-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    .mobile-top-bar{
+        height:15%;
+    }
+    .mobile-blog-container{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        margin-bottom: 4%;
+        width: 90vw;
+        overflow-y: auto;
+        box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
+        a{
+            height: 100%;
+            width: 100%;
+
+        }
+        .mobile-blog-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 37vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: grayscale(1);
+            text-align: center;
+            .shared-bg{
+                background-image: url('../helper//images/backgrounds/lightpencilbackground.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 3%;
+                opacity: 0.85;
+                margin: 5%;
+            }
+        }
+    }
+}

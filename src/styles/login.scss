@@ -1,0 +1,22 @@
+.log-in-wrapper{
+    height: 100%;
+    width: 100%;
+}
+.logged-out-wrapper{
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    font-family: "Indie Flower", cursive;
+}
+.logged-out-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        filter: grayscale(1);
+        width: 100%;
+    }
+}

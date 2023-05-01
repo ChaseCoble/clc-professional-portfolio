@@ -11,7 +11,8 @@ import MobilePortfolioDetail from './routes/MobilePortfolioDetail'
 import ReactModal from 'react-modal';
 import MobileBlogDetail from './routes/MobileBlogDetail';
 import MobileContact from './routes/mobileContact';
-import UnderConstruction from './components/underConstruction';
+import MobileAbout from './routes/mobileAbout';
+
 
 ReactModal.setAppElement('#root');
 
@@ -19,7 +20,7 @@ function IsMobile() {
   var height = window.innerHeight;
   var width = window.innerWidth;
   if (height <= 800) {
-      if (width <= 400) {
+      if (width <= 600) {
           return true;
       } else {
           return false;
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: "/m/blog/:id",
     element: <MobileBlogDetail/>
+  },
+  {
+    path: "/m/about",
+    element: <MobileAbout/>
   },
   {
     path: "*",

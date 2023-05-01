@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    padding-left: 3%;
+    padding-right: 5%;
 }
 #biography-blurb-mobile{
     display: flex;
@@ -12,6 +14,8 @@
     grid-area: 1/1/2/2;
     text-align: center;
     font-family: 'Caveat', cursive;
+    padding-right: 1%;
+    
     img{
         width: 75%;
         filter: grayscale(1);
@@ -22,20 +26,48 @@
         height: 40vh;
         margin: 5%;
         overflow-y: auto;
+        padding: 5%;
+        box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
     }
 
 }
 #mobile-portfolio-wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1fr 10fr;
+    grid-template-areas: 
+        "header"
+        "filterButtons"
+        "portfolioItems"
+}
+.mobile-portfolio-header{
+    grid-area: header;
+    padding: 3%;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+    border: 1px solid black;
+    border-radius: 3px;
+    color: #2d2d2e;
 }
 .mobile-portfolio-items-wrapper{
-    grid-area: 2/1/3/3;
+    grid-area: portfolioItems;
     overflow: auto;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5em;
+    filter: grayscale(1);
+    box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
+    margin: 3%;
+    height: 55vh;
+    a{
+        color: black;
+   
+    }
+    
+    
 }
 .mobile-filter-button-wrapper{
-    grid-area: 1/1/2/3;
+    grid-area: filterButtons;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,11 +75,14 @@
     margin-top: 5%;;
 }
 .mobile-portfolio-item{
+    display: flex;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 25%;
+    height: 50%;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-text-wrapper {
@@ -55,6 +90,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     text-align: center;
+    padding: 5px;
+    color: #e1e4e8;
+    background-image: url("../helper//images//backgrounds/darkpencilbackground.jpg");
+    background-size: cover;
+    background-position: center;
   }
+  

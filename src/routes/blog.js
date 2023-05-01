@@ -98,6 +98,7 @@ export default function Blog() {
         ) : (
           <>
             <TopBar/>
+            <div className="blog-header-wrapper">Blog Postings</div>
             <div id="blog-content-wrapper">
               {getBlogItems()}
             </div>

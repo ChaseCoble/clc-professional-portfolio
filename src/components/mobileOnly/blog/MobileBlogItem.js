@@ -2,23 +2,23 @@ import React, {useState} from "react";
 
 export default function MobileBlogItem(props){
     const {title, content, featured_image_url} = props.item;
-    const [blur, setBlur] = useState(false);
+    const [Emph, setEmph] = useState(false);
     const briefContent = content.substring(0, content.indexOf('.'));
     function handleMouseEnter(){
-        setBlur('blur');
+        setEmph('Emph');
     } 
     function handleMouseLeave(){
-        setBlur('');
+        setEmph('');
     }
     return(
-        <div className="mobile-blog-item" 
+        <div className={`mobile-blog-item ${Emph}`}
             style = {{backgroundImage : `url(${featured_image_url})`}}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
-            <div className="mobile-blog-item-title">
+            <div className="mobile-blog-item-title shared-bg">
                 {title}
             </div>
-            <div className="mobile-blog-item-content">
+            <div className="mobile-blog-item-content shared-bg">
                 {briefContent}
             </div>
         </div>

@@ -17,9 +17,9 @@ export default function BlogItem(props) {
     
       
     
-      const closeModal = () => {
-        setIsOpen(false);
-      };
+    const handleExitClick = () => {
+        setIsOpen(false)
+    }
     return(
         <div className="blog-item-wrapper clickable" style={dynamicStyle} onClick = {handleOnClick}>
             <div className="blog-title-wrapper">{title}</div>
@@ -28,17 +28,16 @@ export default function BlogItem(props) {
                 isOpen={isOpen}
                 className={'blog-item-content-wrapper'}
                 shouldCloseOnEsc={true}
-                shouldCloseOnOverlayClick={true}
                 role="See More Information"
             >
                 <div className="blog-item-toprow">
                     <div className = "blog-item-title-wrapper">
                         <div className = "blog-item-title">
-                            <h1>{title}</h1>
+                            <h1 className = "plaque">{title}</h1>
                         </div>
                     </div>
                     <div className = "blog-item-modal-exit">
-                        <a style={{color: 'inherit'}} onClick = {closeModal} className = "clickable" href=""><FontAwesomeIcon icon={faXmarkSquare}  /></a>
+                        <a style={{color: 'inherit'}} onClick = {handleExitClick} className = "clickable" href= {"/blog"}><FontAwesomeIcon icon={faXmarkSquare}  /></a>
                     </div>
                 </div>
                 <div className="blog-featured-image-wrapper">

@@ -4,7 +4,7 @@ import MobileBlogItem from "./MobileBlogItem";
 import MobileTopBar from "../components/MobileTopBar";
 
 export default function MobileBlog(props){
-    const [blogItems, setBlogItems] = useState(props.items);
+    const [blogItems] = useState(props.items);
     function getMobileBlogItems() {
         return blogItems.map((item) => {
           return (
