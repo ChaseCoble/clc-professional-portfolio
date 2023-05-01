@@ -1,6 +1,6 @@
 import React from "react";
 import MobileTopBar from "../components/mobileOnly/components/MobileTopBar";
-import { useEffect, useState} from "react";
+import { useEffect, useState, useCallback} from "react";
 import LoadingScreen from "../components/loading";
 import { useParams } from "react-router-dom"
 
@@ -9,24 +9,26 @@ export default function MobilePortfolioDetail() {
     const [isLoading, setIsLoading] = useState(true);
     const { id } = useParams();
     console.log("mobile portfolio detail mounted");
-    useEffect(() => {
-        const fetchPortfolioItem = async () => {
-            try {
-                const response = await fetch(`https://chasecoble.devcamp.space/portfolio/portfolio_items/${id}`, {
-                    method: "GET",
-                    mode: "cors",
-                    cache: "no-cache"
+    
+    const fetchPortfolioItem = useCallback(async () => {
+        try {
+            const response = await fetch(`https://chasecoble.devcamp.space/portfolio/portfolio_items/${id}`, {
+                method: "GET",
+                mode: "cors",
+                cache: "no-cache"
         });
         const data = await response.json();
         console.log("portfolio item data" + {portfolioItem})
         setPortfolioItem(data.portfolio_item);
         setIsLoading(false);
-        } catch (error) {
-          console.error(error);
+            } catch (error) {
+             console.error(error);
         }
-      };
+    }, [id, portfolioItem])
+    useEffect(() => {
+        
     fetchPortfolioItem();
-      }, []);
+      }, [fetchPortfolioItem]);
     const {name, url, description, thumb_image_url} = portfolioItem || {};
     return(
         <div className = "mobile-portfolio-detail-fork-wrapper">
