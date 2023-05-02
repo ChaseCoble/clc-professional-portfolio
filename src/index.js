@@ -19,7 +19,7 @@ ReactModal.setAppElement('#root');
 function IsMobile() {
   var height = window.innerHeight;
   var width = window.innerWidth;
-  if (height <= 800) {
+  if (height <= 900) {
       if (width <= 600) {
           return true;
       } else {

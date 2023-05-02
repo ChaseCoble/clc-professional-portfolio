@@ -7,8 +7,9 @@ html{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;  
+    background-attachment: fixed;
     @media only screen and (max-aspect-ratio: 1.05){
-        overflow: hidden;   
+        overflow-y: auto;   
     }
 }
 body{
