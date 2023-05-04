@@ -84,7 +84,7 @@ export default function Blog() {
         }
 
         return blogItems.map((blogItem) => (
-            (blogItem.blog_status === 'published') ? <BlogItem key = {blogItem.id} item = {blogItem} /> : null
+            <BlogItem key = {blogItem.id} item = {blogItem} />
         ))
   }  
   return (
