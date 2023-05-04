@@ -63,6 +63,9 @@
     font-weight: bold;
     opacity: 0.75;   
 }
+.Projects{
+    @include popover(above, $menu-background-color: #bdbdbd );
+}
 .Hobbies{
     @include popover(above, $menu-background-color: #bdbdbd );
 }
