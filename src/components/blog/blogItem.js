@@ -6,7 +6,7 @@ import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
 export default function BlogItem(props) {
     const {title, content, featured_image_url, gridArea, angle } = props.item;
     const [isOpen, setIsOpen] = useState(false);
-    const briefContent = content.substring(0, 9);
+    const briefContent = content.substring(0, 30);
     const dynamicStyle = {
         gridArea: `g${gridArea}`,
         transform: `rotate(${angle}deg)`
