@@ -166,7 +166,7 @@ export default function MobileAbout(){
                         Career
                     </div>
                     <div className={`mobile-about-tab resume-tab clickable ${resumeSelected}`} onClick={()=>{handleTabClick('resume')}}>
-                        Resume
+                        Links
                     </div>
                     <div className="mobile-about-tab-helper-2" />
                 </div>
