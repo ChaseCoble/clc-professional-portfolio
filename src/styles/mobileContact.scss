@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .mobile-contact-link{
     display: flex;
@@ -10,6 +11,15 @@
     justify-content: center;
     align-items: center;
     font-family: "Shadows into Light", cursive;
+    width: 100%;
+    
+    p{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 45%;
+        align-items: center;
+        justify-content: center;
+    }
 }
 .mobile-icon-wrapper{
     display: flex;
