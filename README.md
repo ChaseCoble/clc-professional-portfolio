@@ -1,3 +1,25 @@
-This project was built with Create React App. It is a professional portfolio built on a provided 
-back-end. It includes all professional information in a detailed and aesthetically pleasing 
-fashion. I utilized as much of native React JS as possible to learn more about the framework. This includes state management through hooks, memoization with hooks, and utilizing string formatters coded in vanilla javascript. This will also provide my public facing aspect of my currently in-design project for a personal work flow app. 
+Professional site built with Create React App.
+Project is in version 1, version 2 under development.
+Features include portfolio access, blog access and contact information from a
+borrowed backend.
+
+Updates in progress for version 1.1:
+    API connection to a original Flask backend.
+    Style improvements
+    Refactored style files
+
+Updates in progress for version 2.0:
+    Flask Backend to handle all content in website.
+    Removal of content management from Public facing front end.
+    Seperate Front-End developed to handle content management.
+    Page layout changes.
+
+Future updates:
+    Content Management private Front end to include workflow management including a task app, journaling app and scheduler.
+    Private backend to handle non-professional content.
+    API flow allowing immediate update of Professional content from workflow app.
+    Generalization of styles and user interfaces.
+
+See wireframe for complete app stack at 
+
+https://www.figma.com/community/file/1235322830765142696
