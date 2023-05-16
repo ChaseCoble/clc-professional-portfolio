@@ -10,13 +10,13 @@ export default function MobileBlogDetail(){
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await fetch(`https://chasecoble.devcamp.space/portfolio/portfolio_blogs/${id}`, {
+                const response = await fetch(`https://professional-site-backend.herokuapp.com/blog/get/${id}`, {
                     method: "GET",
                     mode: "cors",
                     cache: "no-cache"
         });
         const data = await response.json();
-        setBlogItem(data.portfolio_blog);
+        setBlogItem(data);
         setIsLoading(false);
         } catch (error) {
           console.error(error);
@@ -24,7 +24,7 @@ export default function MobileBlogDetail(){
       };
     fetchBlog();
       }, [id]);
-      const {title, content, featured_image_url} = blogItem || {};
+      const {title, content, flavorImgURL} = blogItem || {};
     return(
         <div className="mobile-blog-detail">
             <MobileTopBar />
@@ -34,7 +34,7 @@ export default function MobileBlogDetail(){
                     <div className="mobile-blog-title">
                         {title}
                     </div>
-                    <a href = {featured_image_url} className = "clickable"><img src={featured_image_url} alt = "screen shot of website" /></a>
+                    <a href = {flavorImgURL} className = "clickable"><img src={flavorImgURL} alt = "screen shot of website" /></a>
                 </div>
                 <div className="mobile-blog-bottom-row">
                     

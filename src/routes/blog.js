@@ -12,13 +12,13 @@ export default function Blog() {
     useEffect(() => {
         const fetchBlogItems = async () => {
           try {
-            const response = await fetch("https://chasecoble.devcamp.space/portfolio/portfolio_blogs", {
+            const response = await fetch("https://professional-site-backend.herokuapp.com/blog/get", {
               method: "GET",
               mode: "cors",
               cache: "no-cache"
             });
             const data = await response.json();
-            setBlogItems(data.portfolio_blogs);
+            setBlogItems(data);
             setIsLoading(false)
           } catch (error) {
             console.error(error);

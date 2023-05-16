@@ -13,7 +13,7 @@
     box-shadow: 0px 14px 31px 0px rgba(0,0,0,0.75);
     padding: 1%;
     border: 0.5px solid black;
-    background-image: url('../helper/images/backgrounds/lightpencilbackground.jpg');
+    background-image: url('../../helper/images/backgrounds/lightpencilbackground.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,7 +28,7 @@
         -11px 31px 47px 0px rgba(0,0,0,0.75),
         29px 31px 47px 0px rgba(0,0,0,0.75);
     
-    background-image: url("../helper/images/backgrounds/tabletop.jpg");
+    background-image: url("../../helper/images/backgrounds/tabletop.jpg");
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1%;
@@ -52,7 +52,7 @@
     display: grid;
     grid-template-columns: 1.4fr 4.4fr 2fr 4.4fr 2fr;
     grid-template-rows: 1.4fr 2.86fr 1.4fr;
-    background-image: url('../helper/images/backgrounds/book-open.png');
+    background-image: url('../../helper/images/backgrounds/book-open.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 55%;
@@ -83,68 +83,6 @@
         height: 75%;
     }
 }
-.blog-item-content-wrapper{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../helper/images/backgrounds/tabletop.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.75);
-    .blog-item-toprow{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        height: 15%;
-        .blog-item-modal-exit{
-            font-size: 2em;
-            padding: 2%;
-        }
-        .blog-item-title-wrapper{
-            padding: 2%;
-            margin-top: 2%;
-            width: 20%;
-            height: 45%;
 
-        }
-    }
-    .blog-featured-image-wrapper{
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1%;
-        img{
-            height: 100%;
-            filter: grayscale(1);
-        }
-    }
-    .blog-item-content-modal{
-        height: 40%;
-        background-image: url('../helper/images/backgrounds/lightpencilbackground.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 75%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin: 1%;
-        box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.75);
-    }
-}
-.blog-item-title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    h1{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-}
+
 

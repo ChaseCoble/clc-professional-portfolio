@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
+import PortfolioModal from "./PortfolioModal";
 
 
 export default function PortfolioItem(props) {
-  const { name, description, url, category, thumb_image_url, volId, leftMarginConstant} = props.item;
+  const { title, description, category, imgURL, volId, leftMarginConstant} = props.item;
   const [isOpen, setIsOpen] = useState(false);
   const mediaMatch = window.matchMedia('(max-aspect-ratio : 1.05 )')
   const [matches, setMatches ] = useState(mediaMatch.matches);
@@ -76,10 +75,10 @@ export default function PortfolioItem(props) {
       <div className = "portfolio-item-menuwrapper menu">
         <div className="menu-content">
           <div className = "preview-name">
-            <h2>{name}</h2>
+            <h2>{title}</h2>
           </div>
           <div className="preview-image">
-            <img className="preview-image" alt= "imagethumb" src={thumb_image_url} />
+            <img className="preview-image" alt= "imagethumb" src={imgURL} />
           </div>
           <div className="preview-desc">
             <p>{briefDescription}</p>
@@ -88,7 +87,7 @@ export default function PortfolioItem(props) {
       </div>
       <div className="portfolio-binder-wrapper">
         <div className="volume-id"> {romanVolumeId}</div>
-        <div className="portfolio-item-name"> {nameFormatter(name)}</div>
+        <div className="portfolio-item-name"> {nameFormatter(title)}</div>
       </div>
       <ReactModal
         isOpen={isOpen}
@@ -97,26 +96,8 @@ export default function PortfolioItem(props) {
         shouldCloseOnOverlayClick={true}
         role="See More Information"
       >
-            <div className="portfolio-item-toprow">
-                <div className = "name-url-wrapper">
-                  <div className = "portfolio-item-modal-name">
-                    <h1>{name}</h1>
-                  </div>
-                  <div className = "portfolio-item-url">
-                    <a href={url}>Project Link</a>
-                  </div>
-                </div>
-                <div className = "portfolio-item-modal-exit">
-                    <a style={{color: 'inherit'}} onClick = {closeModal} className = "clickable" href="/"><FontAwesomeIcon icon={faXmarkSquare}  /></a>
-                </div>
-            </div>
-            <div className="portfolio-thumb-wrapper">
-                <img alt = "See more data" src={thumb_image_url} />
-            </div>
-            <div className="portfolio-item-content">
-                <p> {description} </p>
-            </div>
-        </ReactModal>
+        <PortfolioModal closingFunction = {closeModal} item = {props.item} />
+      </ReactModal>
     </div>
   )
 }

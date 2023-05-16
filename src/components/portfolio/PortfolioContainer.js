@@ -13,13 +13,13 @@ export default function PortfolioContainer() {
     useEffect(() => {
       const fetchPortfolioItems = async () => {
         try {
-          const response = await fetch("https://chasecoble.devcamp.space/portfolio/portfolio_items", {
+          const response = await fetch("https://professional-site-backend.herokuapp.com/portfolio/get", {
             method: "GET",
             mode: "cors",
             cache: "no-cache"
           });
           const data = await response.json();
-          setPortfolioItems(data.portfolio_items);
+          setPortfolioItems(data);
           setIsLoading(false)
         } catch (error) {
           console.error(error);

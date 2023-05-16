@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import ReactModal from "react-modal";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
+import BlogModal from "../blog/blogModal"
+
 
 export default function BlogItem(props) {
-    const {title, content, featured_image_url, gridArea, angle } = props.item;
+    const {title, content, gridArea, angle } = props.item;
     const [isOpen, setIsOpen] = useState(false);
     const briefContent = content.substring(0, 30);
     const dynamicStyle = {
@@ -30,22 +30,7 @@ export default function BlogItem(props) {
                 shouldCloseOnEsc={true}
                 role="See More Information"
             >
-                <div className="blog-item-toprow">
-                    <div className = "blog-item-title-wrapper">
-                        <div className = "blog-item-title">
-                            <h1 className = "plaque">{title}</h1>
-                        </div>
-                    </div>
-                    <div className = "blog-item-modal-exit">
-                        <a style={{color: 'inherit'}} onClick = {handleExitClick} className = "clickable" href= {"/blog"}><FontAwesomeIcon icon={faXmarkSquare}  /></a>
-                    </div>
-                </div>
-                <div className="blog-featured-image-wrapper">
-                    <img alt = "See more data" src={featured_image_url} />
-                </div>
-                <div className="blog-item-content-modal">
-                    <p> {content} </p>
-                </div>
+                <BlogModal closingFunction = {handleExitClick} item = {props.item} />
             </ReactModal>
         </div>
     )

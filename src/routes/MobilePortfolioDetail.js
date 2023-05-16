@@ -11,13 +11,13 @@ export default function MobilePortfolioDetail() {
     
     const fetchPortfolioItem = useCallback(async () => {
         try {
-            const response = await fetch(`https://chasecoble.devcamp.space/portfolio/portfolio_items/${id}`, {
+            const response = await fetch(`https://professional-site-backend.herokuapp.com/portfolio/get/${id}`, {
                 method: "GET",
                 mode: "cors",
                 cache: "no-cache"
         });
         const data = await response.json();
-        setPortfolioItem(data.portfolio_item);
+        setPortfolioItem(data);
         setIsLoading(false);
             } catch (error) {
              console.error(error);

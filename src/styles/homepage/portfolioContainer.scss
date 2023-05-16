@@ -1,6 +1,6 @@
 .shelf-hor{
     display: flex;
-    background-image: url("../helper/images/backgrounds/woodgrainhorizontal.jpg");
+    background-image: url("../../helper/images/backgrounds/woodgrainhorizontal.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,9 +16,9 @@
     }
 };
 .shelf-vert{
-    background-image: url("../helper/images/backgrounds/woodgrainvert.jpg");
+    background-image: url("../../helper/images/backgrounds/woodgrainvert.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
@@ -29,7 +29,7 @@
 };
 .plaque{
     display: flex;
-    background-image: url("../helper/images/backgrounds/plaque.png");
+    background-image: url("../../helper/images/backgrounds/plaque.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,16 +40,20 @@
     max-height: 80%;
     align-items: center;
     justify-content: center;
+    border: solid 1px black;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    padding: 0.5%;
 };
 .bookhole{
   display: flex;
-  background-image: url("../helper/images/backgrounds/darkpencilbackground.jpg");
+  background-image: url("../../helper/images/backgrounds/darkpencilbackground.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;  
   border: 1px dotted black;
+  box-shadow: inset 0px -1px 59px -14px #000000;
 }
 #portfolio-wrapper{
   display:flex;
@@ -58,6 +62,7 @@
   align-items: center;
   justify-content: center;
   grid-area: 2/2/3/3;
+
 }
 #portfolio-container-wrapper{
   display: grid;
@@ -67,7 +72,7 @@
   grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 0.5fr 10fr 1fr;
   height: 100%;
-  border: 1px solid #b3b3b3;
+  border: 1px solid black;
   @media only screen and (max-aspect-ratio : 1.05){
     grid-template-columns: 1fr 22fr 1fr;
     grid-template-rows : 1fr 34fr 1.5fr;
