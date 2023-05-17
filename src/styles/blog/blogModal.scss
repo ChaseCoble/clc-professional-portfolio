@@ -1,6 +1,6 @@
 .blog-modal-wrapper{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: grid;
     grid-template-areas: 
     "deadtop exit"
@@ -8,7 +8,7 @@
     "image content"
     "deadleft deadright";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 4fr 1fr;
+    grid-template-rows: 0.5fr 1fr 5fr 0.75fr;
     background-image: url('../../helper/images/backgrounds/tabletop.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,11 +53,11 @@
     }
     .blog-featured-image-wrapper{
         grid-area: image;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 75%;
         }
     }
     .blog-item-content-modal{
@@ -68,6 +68,7 @@
         padding: 10%;
         font-size: 1.2em;
         margin: 3%;
+        height: 80%;
         overflow-y: auto;
         background-image: url("../../helper/images/backgrounds/paper.jpg");
         background-position: center;
