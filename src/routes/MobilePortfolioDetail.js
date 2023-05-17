@@ -27,7 +27,7 @@ export default function MobilePortfolioDetail() {
         
     fetchPortfolioItem();
       }, [fetchPortfolioItem]);
-    const {name, url, description, thumb_image_url} = portfolioItem || {};
+    const {title, projectURL, description, imgURL,  repoURL, date} = portfolioItem || {};
     return(
         <div className = "mobile-portfolio-detail-fork-wrapper">
             {isLoading === false ? (
@@ -37,15 +37,29 @@ export default function MobilePortfolioDetail() {
                     <div className="mobile-portfolio-item-top">
                         <div className = "mobile-name-url-wrapper">
                             <div className = "mobile-portfolio-item-name">
-                                <h1>{name}</h1>
+                                <h1>{title}</h1>
                             </div>
-                            <div className = "mobile-portfolio-item-url">
-                                <a href={url}>Project Link</a>
+                            <div className = "mobile-portfolio-item-date">
+                                {date}
+                            </div>
+                            <div className = "mobile-portfolio-item-url-wrapper">
+                                {(projectURL !== repoURL) ?
+                                    <div className = "mobile-links-wrapper">
+                                        <div className = "mobile-project-link-wrapper">    
+                                            <a href={projectURL}>Project Link</a>
+                                        </div>
+                                        <div className = "mobile-repo-link-wrapper">
+                                            <a href={repoURL}>Repository Link</a>
+                                        </div>
+                                    </div> :
+                                <div className = "mobile-sole-link-wrapper">
+                                    <a href={projectURL}>Repository Link</a>
+                                </div>}
                             </div>
                         </div>     
                     </div>
                     <div className="mobile-portfolio-item-picture">
-                    <a href = {thumb_image_url} className = "clickable"><img alt = "Website screenshot" src={thumb_image_url} /></a>
+                    <a href = {imgURL} className = "clickable"><img alt = "Website screenshot" src={imgURL} /></a>
                     </div>
                     <div className="mobile-portfolio-description">
                         <p> {description} </p>

@@ -20,9 +20,38 @@
             justify-content: center;
             h1{
                 font-size: 1.3em;
+                font-family: 'Shadows into Light', cursive;
+            }
+            .mobile-portfolio-item-date{
+                font-family: 'Shadows into Light', cursive;
+            }
+            .mobile-portfolio-item-url-wrapper{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .mobile-links-wrapper{
+                    display: flex;
+                    width: 100%;
+                    margin: 3%;
+                    align-items: center;
+                    justify-content: space-around;
+                    .mobile-project-link-wrapper{
+                        padding: 3%;
+                        font-family: 'Caveat', cursive;
+                    }
+                    .mobile-repo-link-wrapper{
+                        padding: 3%;
+                        font-family: 'Caveat', cursive;
+                    }
+                }
+                .mobile-sole-link-wrapper{
+                    padding: 3%;
+                    font-family: 'Caveat', cursive;
+                }
+            }
             }
         }
-    }
     .mobile-portfolio-item-picture{
         grid-area: picture;
         img{
