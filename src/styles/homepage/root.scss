@@ -21,6 +21,7 @@
     grid-area: 2/1/3/2;
     p{
         overflow-y: auto;
+        overflow-x: clip;
     }
     @media only screen and (max-aspect-ratio: 1.05){
         margin: 8%;
