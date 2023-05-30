@@ -20,10 +20,27 @@
         width: 9%;
     }
 };
-.preview-desc{
-    text-overflow: ellipsis;
-    overflow : hidden;
-};
+.menu{
+    .menu-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 15vw;
+        .preview-desc{
+            text-overflow: ellipsis;
+            overflow : hidden;
+        }
+        .preview-image{
+            width: 100%;
+            padding: 2%;
+        }
+        .preview-name{
+            font-size: 0.85em;
+        }
+    }
+}
+
 
 
 .volume-id{
