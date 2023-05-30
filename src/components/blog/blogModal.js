@@ -10,7 +10,7 @@ export default function BlogModal(props){
     return(
         <div className = "blog-modal-wrapper">
             <div className = "blog-item-modal-exit">
-                <a style={{color: 'inherit'}} onClick = {exitClick} className = "clickable" href= {"/blog"}><FontAwesomeIcon icon={faXmarkSquare}  /></a>
+                <a style={{color: 'inherit'}} onClick = {exitClick} className = "clickable" href= {""}><FontAwesomeIcon icon={faXmarkSquare}  /></a>
             </div>
             <div className = "blog-item-title">
                 <h1 className = "plaque">{title}</h1>

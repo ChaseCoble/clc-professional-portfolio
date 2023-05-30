@@ -13,7 +13,7 @@ export default function PortfolioModal(props){
                 <h1>{title}</h1>
             </div>
             <div className = "portfolio-item-modal-exit">
-                <a style={{color: 'inherit'}} onClick = {handleExitClick} className = "clickable" href="/"><FontAwesomeIcon icon={faXmarkSquare}  /></a>
+                <a style={{color: 'inherit'}} onClick = {handleExitClick} className = "clickable" href=""><FontAwesomeIcon icon={faXmarkSquare}  /></a>
             </div>
             
              {(projectURL !== repoURL) ?
