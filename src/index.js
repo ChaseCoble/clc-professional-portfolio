@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/main.scss';
 import Root from './routes/root';
-import AuthenticationHOC from './routes/authenticationHOC';
+
 import About from './routes/about';
 import Error from './routes/error';
 import MobilePortfolioDetail from './routes/MobilePortfolioDetail'
