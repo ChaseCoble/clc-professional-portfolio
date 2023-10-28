@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/main.scss';
 import Root from './routes/root';
-import Blog from './routes/blog';
 import AuthenticationHOC from './routes/authenticationHOC';
 import About from './routes/about';
 import Error from './routes/error';
 import MobilePortfolioDetail from './routes/MobilePortfolioDetail'
 import ReactModal from 'react-modal';
-import MobileBlogDetail from './routes/MobileBlogDetail';
 import MobileContact from './routes/mobileContact';
 import MobileAbout from './routes/mobileAbout';
 
@@ -36,10 +34,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root/>,
   },
-  {
-    path: "/blog",
-    element: <Blog/>
-  },
+
   {
     path: "/m/contact",
     element: <MobileContact/>
@@ -55,10 +50,6 @@ const router = createBrowserRouter([
   {
     path: "/m/portfolio/:id",
     element: <MobilePortfolioDetail/>
-  },
-  {
-    path: "/m/blog/:id",
-    element: <MobileBlogDetail/>
   },
   {
     path: "/m/about",

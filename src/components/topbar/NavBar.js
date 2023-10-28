@@ -11,7 +11,6 @@ export default function NavBar() {
                     <ul className = "dropdown">
                         <li><a className = 'nav-link' href = "/">Home</a></li>
                         <li><a className = "nav-link" href="/about">About</a></li>
-                        <li><a className = "nav-link" href = "/blog">Blog</a> </li>
                         <li><a className = "nav-link" href = "/auth/login">Sign In</a></li>
                     </ul>
                 </li>
