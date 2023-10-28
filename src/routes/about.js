@@ -13,19 +13,24 @@ export default function About() {
                     <div className="about-left-column">
                         <div className="about-biography">
                             <h4>Biography</h4>
-                            <p>I am a father of four amazing boys; Bentley, Kayden, Eithan and Eli, and the proud husband of the most supportive and loving woman on Earth, Jenny. I am driven and passionate about learning and science in general. I have experimented with coding in Python and HTML for 11 years, and achieved a full education in Full Stack Development in 2023. I have attended some University for Chemisty, leaving due to financial constraints. I am an avid reader and researcher as well as a volunteer tutor for Mathematics and Coding. </p> 
+                            <p>I am a father of four amazing boys; Bentley, Kayden, Eithan and Eli, and the proud husband of the most supportive and loving woman on Earth, Jenny. I am driven and passionate about learning and science in general. I have experimented with coding in Python and HTML for 11 years, and achieved a full education in Full Stack Development in 2023. I am an active Computer Science major at Fort Hays State University and also taking elective high level math courses to support my Computer Science ability. I am an avid reader and researcher as well as a volunteer tutor for Mathematics and Coding. </p> 
                         </div>
                         <div className="about-education">
                             <h2>Education</h2>
                             <div className="about-education-unit">
+                                <h4>Fort Hays State University</h4>
+                                <h6>2023- Est. 2029 </h6>
+                                <p>I am enrolled in a Bachelors program for Computer Science with a focus on Machine Learning and AI. I've also discussed research and Master's program with heads of department and plan to get my Master's in AI with a research focus on Assistive AI for aiding the disabled and mental health sufferers.</p>
+                            </div>
+                            <div className="about-education-unit">
                                 <h4>Google Certifications</h4>
                                 <h6>2023-Now</h6>
-                                <p>I am currently pursuing certifications from Google in Advanced Python for Automation, and Kotlin for Android Development</p>
+                                <p>I am currently pursuing certifications from Google in Advanced Python for Automation, Cybersecurity, and Kotlin for Android Development</p>
                             </div>
                             <div className="about-education-unit">
                                 <h4>Bottega University</h4>
-                                <h6>2022-Now</h6>
-                                <p>I achieved a Full Stack Certification from Bottega University. This program included ReactJS, Javascript, Python, Flask, MySQL and Redis. I also am pursuing training in React Native and Machine Learning through Bottega</p>
+                                <h6>2022-2023</h6>
+                                <p>I achieved a Full Stack Certification from Bottega University. This program included ReactJS, Javascript, Python, Flask, MySQL and Redis.</p>
                             </div>
                             <div className = "about-education-unit">
                                 <h4>Coursera</h4>
@@ -67,9 +72,21 @@ export default function About() {
                         <div className = "about-work-wrapper">
                             <div className = "about-work-title-wrapper">Career History</div>
                             <div className = "about-work-item">
+                                <h2>Fort Hays State University</h2>
+                                <h4>Full Time Student</h4>
+                                <h6>2023 - Now</h6>
+                                <p>Focusing on school and helping with my four boys. Class load including Computer Science major courses and elective advanced mathematics courses.</p>    
+                            </div>
+                            <div className = "about-work-item">
+                                <h2>Camber Children's Mental Hospital</h2>
+                                <h4>Behavioural Health Technician</h4>
+                                <h6>2023 - 2023</h6>
+                                <p>Helping children in an acute psychiatric state learning coping and self regulation skills while working as a team and assuring safety for clients and staff alike.</p>    
+                            </div>
+                            <div className = "about-work-item">
                                 <h2>Bottega University</h2>
                                 <h4>Apprentice Teaching Assistant</h4>
-                                <h6>2023 - Now</h6>
+                                <h6>2023 - 2023</h6>
                                 <p>Teaching Full Stack Development utilizing React JS, Python, SCSS, and Mysql as well as teaching development techniques like avoiding anti-patterns, planning with UML, and interview techniques</p>
                             </div>
                             <div className = "about-work-item">
