@@ -40,10 +40,6 @@ const router = createBrowserRouter([
     element: <MobileContact/>
   },
   {
-    path: "/auth/:fork",
-    element: <AuthenticationHOC/>
-  },
-  {
     path: "/about",
     element: <About/>
   },
