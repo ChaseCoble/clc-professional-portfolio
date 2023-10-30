@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#under construction
+/src/components/authentication
+/src/components/blog
+/src/components/mobileOnly/blog
+/src/test.js
+/src/styles/blog
+/src/styles/mobileBlogDetail
+/src/styles/login

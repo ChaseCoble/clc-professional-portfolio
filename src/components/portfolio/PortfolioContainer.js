@@ -29,39 +29,39 @@ export default function PortfolioContainer() {
     }, []);
     
     function getPortfolioItems() {
-      var reactComparator = 0;
-      var pythonComparator = 0;
-      var hobbiesComparator = 0;
-      var projectsComparator = 0;
+      var frontComparator = 0;
+      var backComparator = 0;
+      var softwareComparator = 0;
+      var datascienceComparator = 0;
       var leftMarginConstant = 0;
       var volId = 0;
       for (let portfolioItem of portfolioItems) {
         switch(portfolioItem.category) {
-          case "React":            
-            leftMarginConstant = reactComparator;
-            reactComparator = reactComparator + 1;
-            volId = reactComparator;
+          case "FrontendWeb":            
+            leftMarginConstant = frontComparator;
+            frontComparator = frontComparator + 1;
+            volId = frontComparator;
             portfolioItem.leftMarginConstant = leftMarginConstant;
             portfolioItem.volId = volId;
             break;
-          case "Python":
-            leftMarginConstant = pythonComparator;
-            pythonComparator = pythonComparator + 1;
-            volId = pythonComparator;
+          case "BackendWeb":
+            leftMarginConstant = backComparator;
+            backComparator = backComparator + 1;
+            volId = backComparator;
             portfolioItem.leftMarginConstant = leftMarginConstant;
             portfolioItem.volId = volId;
             break;
-          case "Hobbies":
-            leftMarginConstant = hobbiesComparator;
-            hobbiesComparator = hobbiesComparator + 1;
-            volId = hobbiesComparator;
+          case "SoftwareDev":
+            leftMarginConstant = softwareComparator;
+            softwareComparator = softwareComparator + 1;
+            volId = softwareComparator;
             portfolioItem.leftMarginConstant = leftMarginConstant;
             portfolioItem.volId = volId;
             break;
-          case "Projects":
-            leftMarginConstant = projectsComparator;
-            projectsComparator = projectsComparator + 1;
-            volId = projectsComparator;
+          case "DataScience":
+            leftMarginConstant = datascienceComparator;
+            softwareComparator = datascienceComparator + 1;
+            volId = datascienceComparator;
             portfolioItem.leftMarginConstant = leftMarginConstant;
             portfolioItem.volId = volId;
             break;  
@@ -91,28 +91,28 @@ export default function PortfolioContainer() {
           <div id="portfolio-body">
             <div id="portfolio-body-rail-1" className="shelf-hor">
               <div id="portfolio-body-rail-1-plaque" className="plaque">
-                <div className="plaque-contents">React</div>
+                <div className="plaque-contents">Front End Web Development</div>
               </div> 
             </div>
             <div id="portfolio-body-rail-2" className="shelf-hor">
               <div id="portfolio-body-rail-2-plaque" className="plaque">
-                <div className="plaque-contents">Python</div>
+                <div className="plaque-contents">Back End Web Development</div>
               </div>
             </div>
             <div id="portfolio-body-rail-3" className="shelf-hor">
               <div id="portfolio-body-rail-3-plaque" className="plaque">
-                <div className="plaque-contents">Projects</div>
+                <div className="plaque-contents">Software Development</div>
               </div>
             </div>
-            <div id="portfolio-bookhole-1" className="bookhole React" />
-            <div id="portfolio-bookhole-2" className="bookhole Python" />
-            <div id="portfolio-bookhole-3" className="bookhole Project" />
-            <div id="portfolio-bookhole-4" className="bookhole Hobbies" />
+            <div id="portfolio-bookhole-1" />
+            <div id="portfolio-bookhole-2" />
+            <div id="portfolio-bookhole-3" />
+            <div id="portfolio-bookhole-4" />
             {getPortfolioItems()}
           </div>
           <div id="portfolio-container-bottombar" className="shelf-hor">
             <div id="portfolio-body-4-placard" className="plaque">
-              <div className="plaque-contents">Hobbies</div>
+              <div className="plaque-contents">Data Science and Machine Learning</div>
             </div>
           </div> 
         </div>

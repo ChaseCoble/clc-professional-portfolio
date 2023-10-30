@@ -4,6 +4,7 @@ import PortfolioModal from "./PortfolioModal";
 
 
 export default function PortfolioItem(props) {
+  console.log(props.item)
   const { title, description, category, imgURL, volId, leftMarginConstant} = props.item;
   const [isOpen, setIsOpen] = useState(false);
   const mediaMatch = window.matchMedia('(max-aspect-ratio : 1.05 )')

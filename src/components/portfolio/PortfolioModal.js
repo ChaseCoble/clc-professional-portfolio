@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function PortfolioModal(props){
-    const { title, description, projectURL, repoURL, imgURL, date} = props.item;
+    const { title, description, projectURL, repoURL, language, languagedetail, imgURL, date} = props.item;
     const handleExitClick = () => {
         props.closingFunction();
     }
@@ -11,6 +11,8 @@ export default function PortfolioModal(props){
         <div className = "portfolio-modal-wrapper">
             <div className = "portfolio-item-modal-name">
                 <h1>{title}</h1>
+                <p>{language}</p>
+                <p>{languagedetail}</p>
             </div>
             <div className = "portfolio-item-modal-exit">
                 <span style={{color: 'inherit'}} onClick = {handleExitClick} className = "clickable" href=""><FontAwesomeIcon icon={faXmarkSquare}  /></span>

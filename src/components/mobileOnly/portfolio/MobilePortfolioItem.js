@@ -4,7 +4,7 @@ import React from "react";
 
 export default function MobilePortfolioItem(props) {
     const [ blur, setEmph ] = useState('');
-    const { title, category, imgURL} = props.item;
+    const { title, category, imgURL, language} = props.item;
     const nameBrief=
         title.substring(0, 10).split(' ').join('\u00b7');
         
@@ -22,6 +22,7 @@ export default function MobilePortfolioItem(props) {
             <div className="img-text-wrapper">    
                 <div className="mobile-portfolio-item-category">{category}</div>
                 <div className="mobile-portfolio-item-name">{nameBrief}</div>
+                <div className="mobile-porfolio-item-language">{language}</div>
             </div>
         </div>
     )
