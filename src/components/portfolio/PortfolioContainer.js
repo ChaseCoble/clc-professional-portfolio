@@ -104,10 +104,10 @@ export default function PortfolioContainer() {
                 <div className="plaque-contents">Software Development</div>
               </div>
             </div>
-            <div id="portfolio-bookhole-1" />
-            <div id="portfolio-bookhole-2" />
-            <div id="portfolio-bookhole-3" />
-            <div id="portfolio-bookhole-4" />
+            <div id="portfolio-bookhole-1" className="bookhole frontendweb" />
+            <div id="portfolio-bookhole-2" className = "bookhole backendweb" />
+            <div id="portfolio-bookhole-3" className = "bookhole softwaredev" />
+            <div id="portfolio-bookhole-4" className = "bookhole datascience" />
             {getPortfolioItems()}
           </div>
           <div id="portfolio-container-bottombar" className="shelf-hor">

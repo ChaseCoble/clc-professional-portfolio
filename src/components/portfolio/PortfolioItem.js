@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
-import PortfolioModal from "./PortfolioModal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
+
 
 
 export default function PortfolioItem(props) {
-  console.log(props.item)
-  const { title, description, category, imgURL, volId, leftMarginConstant} = props.item;
+  const { title, description, category, imgURL, volId, leftMarginConstant, repoURL, projectURL, language, languagedetail, date} = props.item;
   const [isOpen, setIsOpen] = useState(false);
   const mediaMatch = window.matchMedia('(max-aspect-ratio : 1.05 )')
   const [matches, setMatches ] = useState(mediaMatch.matches);
@@ -56,12 +57,14 @@ export default function PortfolioItem(props) {
   };
 
   const handleOnClick = () => {
+    console.log("Handle on click");
     setIsOpen(true);
   };
 
   
 
-  const closeModal = () => {
+  const closeModal = () =>{
+    console.log("Modal closed");
     setIsOpen(false);
   };
   
@@ -69,7 +72,7 @@ export default function PortfolioItem(props) {
     <div
       className={`${category} portfolio-item-wrapper`}
       id={`'portfolio-item' + ${volumeId}`}
-      onClick={handleOnClick}
+      
       data-left-margin-constant = {leftMarginConstant}
       style = {orientationQuery()} 
     >
@@ -86,18 +89,49 @@ export default function PortfolioItem(props) {
           </div>
         </div>
       </div>
-      <div className="portfolio-binder-wrapper">
+      <div className="portfolio-binder-wrapper" onClick={handleOnClick}>
         <div className="volume-id"> {romanVolumeId}</div>
         <div className="portfolio-item-name"> {nameFormatter(title)}</div>
       </div>
       <ReactModal
         isOpen={isOpen}
+        onRequestClose={closeModal}
         className={'portfolio-item-content-wrapper'}
         shouldCloseOnEsc={true}
-        shouldCloseOnOverlayClick={true}
         role="See More Information"
       >
-        <PortfolioModal closingFunction = {closeModal} item = {props.item} />
+        <div className = "portfolio-modal-wrapper">
+            <div className = "portfolio-item-modal-name">
+                <h1>{title}</h1>
+                <h2 className = "modal-language">{language}</h2>
+                <p className = "modal-languagedetail">{languagedetail}</p>
+            </div>
+            <div className = "portfolio-item-modal-exit">
+                <span style={{color: 'inherit'}} onClick = {closeModal} className = "clickable" ><FontAwesomeIcon icon={faXmarkSquare}  /></span>
+            </div>
+            
+             {(projectURL !== repoURL) ?
+                <div className = "links-wrapper">
+                    <div className = "project-link-wrapper">    
+                        <a href={projectURL}>Project Link</a>
+                    </div>
+                    <div className = "repo-link-wrapper">
+                        <a href={repoURL}>Repository Link</a>
+                    </div>
+                </div> :
+                <div className = "sole-link-wrapper">
+                    <a href={projectURL}>Repository Link</a>
+                </div>}
+            <div className="portfolio-thumb"><img alt = "See more data" src={imgURL} /></div>
+            <div className="portfolio-item-content">
+                <p className = "portfolio-modal-date">
+                    {date}
+                </p>
+                <p className = "portfolio-modal-content">
+                    {description}
+                </p>
+            </div>  
+        </div>
       </ReactModal>
     </div>
   )

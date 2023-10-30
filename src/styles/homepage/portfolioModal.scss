@@ -1,3 +1,6 @@
+.ReactModal__Content{
+    display: grid;
+}
 .portfolio-modal-wrapper{
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -7,21 +10,33 @@
         "projectlink repolink"
         "thumb description"
         "deadleft deadright";
-    width: 100%;
-    height: 100%;
+    width: 90vh;
+    height: 75vh;
     background-image: url('../../helper/images/backgrounds/lightpencilbackground.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 1%;
+    margin: 5%;
     align-items: center;
     justify-content: center;
+    align-self: center;
+    justify-self: center;
 
     .portfolio-item-modal-name{
         grid-area: title;
         padding: 2%;
         font-family: 'Indie Flower', cursive;
+        .modal-language{
+            font-size: 150%;
+            margin-left: 7.5%;
+            
+        }
+        .modal-languagedetail{
+            font-size: 125%;
+        }
      }
+     
     .portfolio-item-modal-exit{
         grid-area: exit;
         display: flex;
@@ -85,7 +100,7 @@
     }
     .portfolio-item-content{
         grid-area: description;
-        width: 100%;
+        width: 95%;
         height: 100%;
         display: flex;
         flex-direction: column;
