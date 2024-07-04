@@ -3,7 +3,7 @@ import PortfolioItem from "./PortfolioItem";
 import LoadingScreen from "../loading";
 import MobilePortfolio from "../mobileOnly/portfolio/MobilePortfolio"
 import { mobContext } from "../../index";
-import backendURL from "../../helper/url";
+
 
 export default function PortfolioContainer() {
     const [portfolioItems, setPortfolioItems] = useState();
@@ -14,7 +14,7 @@ export default function PortfolioContainer() {
     useEffect(() => {
       const fetchPortfolioItems = async () => {
         try {
-          const response = await fetch(backendURL + "/portfolio/get", {
+          const response = await fetch("https://coblexdevelopment-backend-987493fde519.herokuapp.com/portfolio/get", {
             method: "GET",
             mode: "cors",
             cache: "no-cache"
