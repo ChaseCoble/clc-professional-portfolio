@@ -30,3 +30,12 @@ yarn-error.log*
 /src/styles/blog
 /src/styles/mobileBlogDetail
 /src/styles/login
+/src/components/topbar/NavBar.js
+/src/routes/blog.js
+/src/routes/MobileBlogDetail.js
+/src/routes/authenticationHOC.js
+/src/routes/mobileContact.js
+/src/components/topbar/NavBar.js
+/src/components/deniedAccess.js
+/src/components/underConstruction.js
+/src/components/helper/url.js

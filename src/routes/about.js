@@ -19,13 +19,8 @@ export default function About() {
                             <h2>Education</h2>
                             <div className="about-education-unit">
                                 <h4>Fort Hays State University</h4>
-                                <h6>2023- Est. 2029 </h6>
-                                <p>I am enrolled in a Bachelors program for Computer Science with a focus on Machine Learning and AI. I've also discussed research and Master's program with heads of department and plan to get my Master's in AI with a research focus on Assistive AI for aiding the disabled and mental health sufferers.</p>
-                            </div>
-                            <div className="about-education-unit">
-                                <h4>Google Certifications</h4>
-                                <h6>2023-Now</h6>
-                                <p>I am currently pursuing certifications from Google in Advanced Python for Automation, Cybersecurity, and Kotlin for Android Development</p>
+                                <h6>2023- Spring 2025 </h6>
+                                <p>I am enrolled in a Bachelors program for Computer Science with a focus on Machine Learning and AI and a minor in mathematics. I've also discussed research and Master's program with heads of department and plan to get my Master's in Data Science with a research focus on Assistive AI for aiding the disabled and mental health sufferers. Technologies learned include C++, Java, and SML</p>
                             </div>
                             <div className="about-education-unit">
                                 <h4>Bottega University</h4>

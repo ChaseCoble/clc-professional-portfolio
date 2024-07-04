@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "./NavBar";
 import logoSrc from '../../helper/images/logo/logo.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
@@ -28,11 +27,11 @@ export default function TopBar() {
                     <div className="icon-wrapper">
                         <FontAwesomeIcon icon={faEnvelope} className="clickable icon" href="mailto:coblexdevelopment@gmail.com" />
                     </div>
-                    <p>coblexdevelopment@gmail.com</p>
+                    <p>chasecobledevelopment@gmail.com</p>
                 </div>
             </div>
             <div id="nav-wrapper">
-                <NavBar />
+                <a className = "nav-link" href = "/about"> More professional Information </a>
             </div>
         </div>
     )

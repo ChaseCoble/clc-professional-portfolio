@@ -16,13 +16,13 @@ export default function MobileContact(){
                         <a className="clickable" style={{color: 'inherit'}} href="tel:7852898817"><FontAwesomeIcon icon={faPhone} /></a>
                         <a className="clickable" href="sms:7852898817" style={{color: 'inherit'}}><FontAwesomeIcon icon={faMessage}  /></a>
                     </div>
-                    <p>785-289-8817</p>
+                    <p>785-877-0458</p>
                 </div>
                 <div className="mobile-contact-link">
                     <div className="mobile-icon-wrapper">
                         <a className="clickable" href="mailto:coblexdevelopment@gmail.com" style={{color: 'inherit'}}><FontAwesomeIcon icon={faEnvelope}/></a> 
                     </div>
-                    <p>coblexdevelopment@gmail.com</p>
+                    <p>chasecobledevelopment@gmail.com</p>
                 </div>
             </div>
         </div>

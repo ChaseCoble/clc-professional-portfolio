@@ -2,7 +2,8 @@ import React from "react";
 import MobileTopBar from "../components/mobileOnly/components/MobileTopBar";
 import { useEffect, useState, useCallback} from "react";
 import LoadingScreen from "../components/loading";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
+import backendURL from "../helper/url";
 
 export default function MobilePortfolioDetail() {
     const [portfolioItem, setPortfolioItem] = useState();
@@ -11,7 +12,7 @@ export default function MobilePortfolioDetail() {
     
     const fetchPortfolioItem = useCallback(async () => {
         try {
-            const response = await fetch(`https://professional-site-backend.herokuapp.com/portfolio/get/${id}`, {
+            const response = await fetch(backendURL + `/portfolio/get/${id}`, {
                 method: "GET",
                 mode: "cors",
                 cache: "no-cache"

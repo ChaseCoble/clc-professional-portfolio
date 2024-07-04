@@ -15,7 +15,7 @@ export default function Root() {
                 <div id = {`biography-blurb${mobTag}`}> 
                     <img src = {bioPic} alt = "Chase Coble" />
                     <p>
-                        My name is Chase Coble, and I am a full stack developer from Salina, Kansas. I am incredibly passionate about learning, problem solving, and the future of all the sciences, especially Computer Sciences. At this time I am adept with ReactJS, Javascript, Python and HTML. My next goals are learning PyTorch for Machine Learning and AWS for cloud management.
+                        My name is Chase Coble, and I am a data science developer from Hays, Kansas. I am incredibly passionate about learning, problem solving, and the future of all the sciences, especially Computer Sciences. After 3 years of Computer Science education, I am conversant with most imperative languages, and working on learning how to handle functional languages like SML. I have one year of my Bachelor's degree and it includes two Master's level courses. I also want to emphasize that this portfolio is not the most recent demonstration of my abilities, I am working on a new portfolio that utilizes the NextJS/FastAPI/Postgressql tech stack!
                     </p> 
                 </div>
                 <div id = {`portfolio-wrapper${mobTag}`}> <PortfolioContainer /> </div>

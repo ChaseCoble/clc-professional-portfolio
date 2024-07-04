@@ -40,28 +40,28 @@ export default function MobilePortfolio(props) {
           onClick={() => handleFilter("FrontendWeb")}
           type="button"
         >
-          React
+          Front End
         </button>
         <button
           className="btn filter-button"
           onClick={() => handleFilter("BackendWeb")}
           type="button"
         >
-          Python
+          Software
         </button>
         <button
           className="btn filter-button"
           onClick={() => handleFilter("SoftwareDev")}
           type="button"
         >
-          Projects
+          Machine Learning
         </button>
         <button
           className="btn filter-button"
           onClick={() => handleFilter("DataScience")}
           type="button"
         >
-          Hobbies
+          Articles
         </button>
         <button
           className="btn filter-button"

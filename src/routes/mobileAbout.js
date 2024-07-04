@@ -57,14 +57,14 @@ export default function MobileAbout(){
                         <p className="content-title">Education</p>
                         <div className = "about-education-content-wrapper about-content-container about-grid">
                             <div className="about-education-unit about-grid-item">
-                                <h4>Google Certifications</h4>
-                                <h6>2023-Now</h6>
-                                <p>I am currently pursuing certifications from Google in Advanced Python for Automation, and Kotlin for Android Development</p>
+                                <h4>Fort Hays State University</h4>
+                                <h6>2023-Spring 2025</h6>
+                                <p>I am currently 3 years into a Computer Science Bachelor's with a minor in Mathematics. Course work has been elevated, with previous experience waiving out basic Computer Science and Informatics courses. I will be taking my first Master's level class in Fall 2024.</p>
                             </div>
                             <div className="about-education-unit about-grid-item">
                                 <h4>Bottega University</h4>
-                                <h6>2022-Now</h6>
-                                <p>I achieved a Full Stack Certification from Bottega University. This program included ReactJS, Javascript, Python, Flask, MySQL and Redis. I also am pursuing training in React Native and Machine Learning through Bottega</p>
+                                <h6>2022-2023</h6>
+                                <p>I achieved a Full Stack Certification from Bottega University. This program included ReactJS, Javascript, Python, Flask, and MySQL</p>
                             </div>
                             <div className="about-education-unit about-grid-item">
                                 <h4>Coursera</h4>

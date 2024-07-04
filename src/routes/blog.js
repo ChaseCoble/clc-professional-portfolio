@@ -4,6 +4,7 @@ import BlogItem from "../components/blog/blogItem";
 import LoadingScreen from "../components/loading";
 import { mobContext } from "../index";
 import MobileBlog from "../components/mobileOnly/blog/MobileBlog";
+import backendURL from "../helper/url";
 
 export default function Blog() {
     const [blogItems, setBlogItems] = useState([]);
@@ -12,7 +13,7 @@ export default function Blog() {
     useEffect(() => {
         const fetchBlogItems = async () => {
           try {
-            const response = await fetch("https://professional-site-backend.herokuapp.com/blog/get", {
+            const response = await fetch(backendURL + "/blog/get", {
               method: "GET",
               mode: "cors",
               cache: "no-cache"

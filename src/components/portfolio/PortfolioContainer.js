@@ -3,6 +3,7 @@ import PortfolioItem from "./PortfolioItem";
 import LoadingScreen from "../loading";
 import MobilePortfolio from "../mobileOnly/portfolio/MobilePortfolio"
 import { mobContext } from "../../index";
+import backendURL from "../../helper/url";
 
 export default function PortfolioContainer() {
     const [portfolioItems, setPortfolioItems] = useState();
@@ -13,7 +14,7 @@ export default function PortfolioContainer() {
     useEffect(() => {
       const fetchPortfolioItems = async () => {
         try {
-          const response = await fetch("https://professional-site-backend.herokuapp.com/portfolio/get", {
+          const response = await fetch(backendURL + "/portfolio/get", {
             method: "GET",
             mode: "cors",
             cache: "no-cache"
@@ -37,28 +38,28 @@ export default function PortfolioContainer() {
       var volId = 0;
       for (let portfolioItem of portfolioItems) {
         switch(portfolioItem.category) {
-          case "FrontendWeb":            
+          case "Frontend":            
             leftMarginConstant = frontComparator;
             frontComparator = frontComparator + 1;
             volId = frontComparator;
             portfolioItem.leftMarginConstant = leftMarginConstant;
             portfolioItem.volId = volId;
             break;
-          case "BackendWeb":
+          case "Software":
             leftMarginConstant = backComparator;
             backComparator = backComparator + 1;
             volId = backComparator;
             portfolioItem.leftMarginConstant = leftMarginConstant;
             portfolioItem.volId = volId;
             break;
-          case "SoftwareDev":
+          case "Data":
             leftMarginConstant = softwareComparator;
             softwareComparator = softwareComparator + 1;
             volId = softwareComparator;
             portfolioItem.leftMarginConstant = leftMarginConstant;
             portfolioItem.volId = volId;
             break;
-          case "DataScience":
+          case "Articles":
             leftMarginConstant = datascienceComparator;
             softwareComparator = datascienceComparator + 1;
             volId = datascienceComparator;
@@ -91,17 +92,17 @@ export default function PortfolioContainer() {
           <div id="portfolio-body">
             <div id="portfolio-body-rail-1" className="shelf-hor">
               <div id="portfolio-body-rail-1-plaque" className="plaque">
-                <div className="plaque-contents">Front End Web Development</div>
+                <div className="plaque-contents">Web Development</div>
               </div> 
             </div>
             <div id="portfolio-body-rail-2" className="shelf-hor">
               <div id="portfolio-body-rail-2-plaque" className="plaque">
-                <div className="plaque-contents">Back End Web Development</div>
+                <div className="plaque-contents">Software</div>
               </div>
             </div>
             <div id="portfolio-body-rail-3" className="shelf-hor">
               <div id="portfolio-body-rail-3-plaque" className="plaque">
-                <div className="plaque-contents">Software Development</div>
+                <div className="plaque-contents">Data Science</div>
               </div>
             </div>
             <div id="portfolio-bookhole-1" className="bookhole frontendweb" />
@@ -112,7 +113,7 @@ export default function PortfolioContainer() {
           </div>
           <div id="portfolio-container-bottombar" className="shelf-hor">
             <div id="portfolio-body-4-placard" className="plaque">
-              <div className="plaque-contents">Data Science and Machine Learning</div>
+              <div className="plaque-contents">Articles</div>
             </div>
           </div> 
         </div>

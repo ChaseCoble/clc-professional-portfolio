@@ -8,7 +8,6 @@ import About from './routes/about';
 import Error from './routes/error';
 import MobilePortfolioDetail from './routes/MobilePortfolioDetail'
 import ReactModal from 'react-modal';
-import MobileContact from './routes/mobileContact';
 import MobileAbout from './routes/mobileAbout';
 
 
@@ -33,11 +32,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
-  },
-
-  {
-    path: "/m/contact",
-    element: <MobileContact/>
   },
   {
     path: "/about",
