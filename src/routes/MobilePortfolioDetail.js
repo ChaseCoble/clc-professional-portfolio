@@ -12,7 +12,7 @@ export default function MobilePortfolioDetail() {
     
     const fetchPortfolioItem = useCallback(async () => {
         try {
-            const response = await fetch("https://coblexdevelopment-backend-987493fde519.herokuapp.com/portfolio/get/${id}", {
+            const response = await fetch(`https://coblexdevelopment-backend-987493fde519.herokuapp.com/portfolio/get/${id}`, {
                 method: "GET",
                 mode: "cors",
                 cache: "no-cache"
