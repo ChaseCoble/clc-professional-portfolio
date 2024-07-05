@@ -38,7 +38,7 @@ export default function PortfolioContainer() {
       var volId = 0;
       for (let portfolioItem of portfolioItems) {
         switch(portfolioItem.category) {
-          case "Frontend":            
+          case "Web":            
             leftMarginConstant = frontComparator;
             frontComparator = frontComparator + 1;
             volId = frontComparator;
@@ -105,10 +105,10 @@ export default function PortfolioContainer() {
                 <div className="plaque-contents">Data Science</div>
               </div>
             </div>
-            <div id="portfolio-bookhole-1" className="bookhole frontendweb" />
-            <div id="portfolio-bookhole-2" className = "bookhole backendweb" />
-            <div id="portfolio-bookhole-3" className = "bookhole softwaredev" />
-            <div id="portfolio-bookhole-4" className = "bookhole datascience" />
+            <div id="portfolio-bookhole-1" className="bookhole web" />
+            <div id="portfolio-bookhole-2" className = "bookhole software" />
+            <div id="portfolio-bookhole-3" className = "bookhole data" />
+            <div id="portfolio-bookhole-4" className = "bookhole articles" />
             {getPortfolioItems()}
           </div>
           <div id="portfolio-container-bottombar" className="shelf-hor">

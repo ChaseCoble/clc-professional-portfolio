@@ -1,14 +1,15 @@
 @mixin popover(
-  $menu-position         : below,              
-  $menu-width            : 200,              
+  $menu-position         : fixed,              
+  $menu-width            : 400,              
   $menu-background-color : rgb( 255,255,255 ), 
-  $nubbin-size           : 10,               
+  $nubbin-size           : 30,               
   $menu-hidden-distance  : 20,               
   $menu-shadow-color     : rgba(0,0,0,0.3),    
   $menu-border-radius    : 0,                 
   $is-menu               : true                
   ) {
   display: inline-block;
+  float: left;
   position: relative;
   &:hover {
     cursor: pointer;
@@ -26,6 +27,10 @@
       }
       @if $menu-position == right {
         right: calc(-1 * $menu-width)px;
+      }
+      @if $menu-position == fixed {
+        left: (-20vw - #{$menu-width}px);
+
       }
     }
   }
@@ -68,6 +73,12 @@
       right: (-1 * ($menu-width + $nubbin-size) - $menu-hidden-distance)px;
       transform: translate(0,-50%);
     }
+    @if $menu-position == fixed{
+      padding-right: ($nubbin-size)px;
+      left: (-20vw - $menu-hidden-distance)px;
+      transform : translate(-30vw, -6vh);
+
+    }
     &:hover > .menu-content {
       @if $is-menu == true {
         box-shadow: 0 8px 12px 5px lighten( ($menu-shadow-color), 40% );
@@ -82,7 +93,7 @@
       height: 0;
       border-width: ($nubbin-size + 2)px;
       border-style: solid;
-      position: absolute;
+      position: fixed;
       @if $menu-position == above {
         bottom: -2px;
         left: calc($menu-width / 2)px;
@@ -118,6 +129,15 @@
         border-right-color: lighten($menu-shadow-color, 70%);
         border-bottom-color: transparent;
         border-left-width: 0;
+      }
+      @if $menu-position == fixed {
+        top: 50%;
+        right: -20px;
+        margin-top: calc(-1*$nubbin-size - 2)px;
+        border-top-color: transparent;
+        border-right-width: 0;
+        border-bottom-color: transparent;
+        border-left-color: lighten($menu-shadow-color, 70%); 
       }
     }
     .menu-content:after {
@@ -162,6 +182,15 @@
         border-right-color: $menu-background-color;
         border-bottom-color: transparent;
         border-left-width: 0;
+      }
+      @if $menu-position == fixed {
+        top: 50%;
+        right: 0;
+        margin-top: (-1 * $nubbin-size)px;
+        border-top-color: transparent;
+        border-right-width: 0;
+        border-bottom-color: transparent;
+        border-left-color: $menu-background-color; 
       }
     }
     .menu-content {

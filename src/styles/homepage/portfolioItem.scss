@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .portfolio-item-wrapper{
-    @include popover(below, $menu-background-color: #bdbdbd );
+    @include popover(fixed, $menu-background-color: #bdbdbd );
     background-image: url("../../helper/images/backgrounds/bookspine.png");
     display: flex;
     background-repeat: no-repeat;

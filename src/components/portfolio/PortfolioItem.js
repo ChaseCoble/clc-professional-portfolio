@@ -31,8 +31,8 @@ export default function PortfolioItem(props) {
   }
   
   const volumeId = volId;
-  const romans = require("romans");
-  const romanVolumeId = romans.romanize(volumeId);
+  //const romans = require("romans");
+  //const romanVolumeId = romans.romanize(volumeId);
 
   
   const briefDescription = description.substring(0, description.indexOf('.'));
@@ -90,7 +90,7 @@ export default function PortfolioItem(props) {
         </div>
       </div>
       <div className="portfolio-binder-wrapper" onClick={handleOnClick}>
-        <div className="volume-id"> {romanVolumeId}</div>
+        <div className="volume-id"></div>
         <div className="portfolio-item-name"> {nameFormatter(title)}</div>
       </div>
       <ReactModal
