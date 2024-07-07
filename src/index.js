@@ -9,6 +9,7 @@ import MobilePortfolioDetail from './routes/mobilePortfolioDetail';
 import ReactModal from 'react-modal';
 import MobileAbout from './routes/mobileAbout';
 import MobileContact from './routes/mobileContact';
+import LoadingScreen from "./components/loading";
 
 
 ReactModal.setAppElement('#root');
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/test",
-    element: <Error />
+    element: <LoadingScreen />
   }
 ]);
 

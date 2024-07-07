@@ -6,7 +6,7 @@ export default function MobileItem(props) {
 
   return (
     <div className="mobile-project-wrapper">
-      <img src={imgURL} alt="image for project" className="mobile-project-image" />
+      <img src={imgURL} alt="project illustration" className="mobile-project-image" />
       <div className="mobile-project-title">{title}</div>
       <div className="mobile-project-date">{date}</div>
 

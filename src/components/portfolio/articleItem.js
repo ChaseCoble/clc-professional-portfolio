@@ -5,7 +5,7 @@ export default function ArticleItem(props){
     return(
         <div className = "article-item-wrapper">
             <div className = "article-item-content">
-                <iframe src = {projectURL} className = "article-content-frame" />
+                <iframe title = "article demonstration" src = {projectURL} className = "article-content-frame" />
             </div>
             <div className = "article-item-info">
                 <div className = "article-item-title">{title}</div>

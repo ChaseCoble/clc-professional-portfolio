@@ -30,7 +30,7 @@ export default function ProjectItem(props){
                             </div>
                         </Fragment>}
                     </div>
-                <img className = "project-item-image" src = {imgURL}/>
+                <img className = "project-item-image" src = {imgURL} alt = "concepts of project demonstrated"/>
             </div>
 
         </Fragment>
