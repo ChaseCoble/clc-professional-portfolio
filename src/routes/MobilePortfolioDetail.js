@@ -1,5 +1,5 @@
 import React from "react";
-import MobileTopBar from "../components/mobileOnly/components/MobileTopBar";
+import MobileTopBar from "../components/mobileOnly/components/mobileTopBar";
 import { useEffect, useState, useCallback} from "react";
 import LoadingScreen from "../components/loading";
 import { useParams } from "react-router-dom";

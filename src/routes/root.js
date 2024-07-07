@@ -1,9 +1,9 @@
 import React, {useContext} from "react";
 import TopBar from "../components/topbar/TopBar";
 import PortfolioContainer from "../components/portfolio/portfolioContainer";
-import bioPic from "../helper/images/biography/bioBlurb.jpg"
-import {mobContext} from "../index"
-import MobileTopBar from "../components/mobileOnly/components/MobileTopBar"
+import bioPic from "../helper/images/biography/bioBlurb.jpg";
+import {mobContext} from "../index";
+import MobileTopBar from "../components/mobileOnly/components/mobileTopBar";
 
 export default function Root() {
     const isMob = useContext(mobContext);

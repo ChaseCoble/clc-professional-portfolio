@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import MobileTopBar from "../components/mobileOnly/components/MobileTopBar";
+import MobileTopBar from "../components/mobileOnly/components/mobileTopBar";
 import resumePath from "../helper/documents/ATS_RESUME.pdf";
 
 

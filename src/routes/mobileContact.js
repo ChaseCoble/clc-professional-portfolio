@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
 import { faMessage } from "@fortawesome/free-solid-svg-icons/faMessage";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
-import MobileTopBar from "../components/mobileOnly/components/MobileTopBar";
+import MobileTopBar from "../components/mobileOnly/components/mobileTopBar";
 
 export default function MobileContact(){
     return(
