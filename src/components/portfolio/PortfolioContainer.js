@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
-import PortfolioItem from "./PortfolioItem";
+import PortfolioItem from "./portfolioItem";
 import LoadingScreen from "../loading";
-import MobilePortfolio from "../mobileOnly/portfolio/MobilePortfolio"
+import MobilePortfolio from "../mobileOnly/portfolio/mobilePortfolio";
 import { mobContext } from "../../index";
 
 

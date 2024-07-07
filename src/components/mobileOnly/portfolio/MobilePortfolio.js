@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useCallback } from "react";
-import MobilePortfolioItem from "./MobilePortfolioItem";
+import MobilePortfolioItem from "./mobilePortfolioItem";
 import { Link } from "react-router-dom";
 
 export default function MobilePortfolio(props) {
@@ -37,28 +37,28 @@ export default function MobilePortfolio(props) {
       <div className="mobile-filter-button-wrapper">
         <button
           className="btn filter-button"
-          onClick={() => handleFilter("FrontendWeb")}
+          onClick={() => handleFilter("Web")}
           type="button"
         >
-          Front End
+          Web
         </button>
         <button
           className="btn filter-button"
-          onClick={() => handleFilter("BackendWeb")}
+          onClick={() => handleFilter("Software")}
           type="button"
         >
           Software
         </button>
         <button
           className="btn filter-button"
-          onClick={() => handleFilter("SoftwareDev")}
+          onClick={() => handleFilter("Data")}
           type="button"
         >
-          Machine Learning
+          Data
         </button>
         <button
           className="btn filter-button"
-          onClick={() => handleFilter("DataScience")}
+          onClick={() => handleFilter("Articles")}
           type="button"
         >
           Articles

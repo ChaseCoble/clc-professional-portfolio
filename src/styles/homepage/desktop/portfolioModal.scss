@@ -1,0 +1,38 @@
+.ReactModal__Content{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-modal-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.01fr 1fr 0.1fr;
+    grid-template-areas:
+        "empty exit"
+        "left-column right-column"
+        "fillleft fillright";
+    width: 80%;
+    height: 85%;
+    background-image: url('../../../helper/images/backgrounds/lightpencilbackground.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1%;
+    margin: 3%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    .portfolio-item-modal-exit{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        grid-area: exit;
+        justify-content: flex-end;
+        font-size: x-large;
+        align-self: flex-start;
+    }
+}
+    

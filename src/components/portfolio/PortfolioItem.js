@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
+import ArticleItem from "./articleItem";
+import ProjectItem from "./projectItem";
+import DataScienceItem from "./datascienceItem";
+import Error from "../../routes/error";
 
 
 
 export default function PortfolioItem(props) {
-  const { title, description, category, imgURL, volId, leftMarginConstant, repoURL, projectURL, language, languagedetail, date} = props.item;
+  const { title, description, category, imgURL, volId, leftMarginConstant} = props.item;
   const [isOpen, setIsOpen] = useState(false);
   const mediaMatch = window.matchMedia('(max-aspect-ratio : 1.05 )')
   const [matches, setMatches ] = useState(mediaMatch.matches);
@@ -30,9 +34,7 @@ export default function PortfolioItem(props) {
     }
   }
   
-  const volumeId = volId;
-  //const romans = require("romans");
-  //const romanVolumeId = romans.romanize(volumeId);
+  
 
   
   const briefDescription = description.substring(0, description.indexOf('.'));
@@ -55,16 +57,16 @@ export default function PortfolioItem(props) {
    }
   return nameClip;
   };
-
+  const volumeId = volId;
   const handleOnClick = () => {
-    console.log("Handle on click");
+    ("Handle on click");
     setIsOpen(true);
   };
 
   
 
   const closeModal = () =>{
-    console.log("Modal closed");
+    ("Modal closed");
     setIsOpen(false);
   };
   
@@ -101,37 +103,26 @@ export default function PortfolioItem(props) {
         role="See More Information"
       >
         <div className = "portfolio-modal-wrapper">
-            <div className = "portfolio-item-modal-name">
-                <h1>{title}</h1>
-                <h2 className = "modal-language">{language}</h2>
-                <p className = "modal-languagedetail">{languagedetail}</p>
-            </div>
             <div className = "portfolio-item-modal-exit">
                 <span style={{color: 'inherit'}} onClick = {closeModal} className = "clickable" ><FontAwesomeIcon icon={faXmarkSquare}  /></span>
             </div>
-            
-             {(projectURL !== repoURL) ?
-                <div className = "links-wrapper">
-                    <div className = "project-link-wrapper">    
-                        <a href={projectURL}>Project Link</a>
-                    </div>
-                    <div className = "repo-link-wrapper">
-                        <a href={repoURL}>Repository Link</a>
-                    </div>
-                </div> :
-                <div className = "sole-link-wrapper">
-                    <a href={projectURL}>Repository Link</a>
-                </div>}
-            <div className="portfolio-thumb"><img alt = "See more data" src={imgURL} /></div>
-            <div className="portfolio-item-content">
-                <p className = "portfolio-modal-date">
-                    {date}
-                </p>
-                <p className = "portfolio-modal-content">
-                    {description}
-                </p>
-            </div>  
-        </div>
+            {(() => {
+              switch (category) {
+                case "Web":
+                case "Software":
+                  return <ProjectItem item={props.item} />;
+                case "Articles":
+                  return <ArticleItem item={props.item} />;
+                case "Data":
+                  return <DataScienceItem item={props.item} />;
+                default:
+                  return <Error item={props.item} />;
+              }
+              }
+            )()
+          }
+             
+        </div>  
       </ReactModal>
     </div>
   )

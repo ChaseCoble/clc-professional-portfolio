@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import TopBar from "../components/topbar/TopBar";
-import PortfolioContainer from "../components/portfolio/PortfolioContainer";
+import PortfolioContainer from "../components/portfolio/portfolioContainer";
 import bioPic from "../helper/images/biography/bioBlurb.jpg"
 import {mobContext} from "../index"
 import MobileTopBar from "../components/mobileOnly/components/MobileTopBar"

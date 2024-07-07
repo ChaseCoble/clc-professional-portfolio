@@ -7,6 +7,7 @@ export default function MobileTopBar(){
             <img src={logoSrc} alt= "Coble X Development" id = "mobile-logo" />
             <a className = 'mob-nav-link' href = "/">Home</a>
             <a className = "mob-nav-link" href="/m/about">More Info</a>
+            <a className = "mob-nav-link" href="/m/contact">Contact</a>
         </div>
     )
 }

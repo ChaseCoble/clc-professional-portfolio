@@ -1,0 +1,114 @@
+.project-item-right-column{
+    display: grid;
+    width: 100%;
+    grid-area: right-column;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 5%;
+    font-family: "Indie Flower", cursive;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 7.5fr;
+    grid-template-areas:
+        "title"
+        "date"
+        "language"
+        "languagedetail"
+        "description";
+    .project-item-title{
+        display: flex;
+        font-size: 3vh;
+        padding: 0%;
+        margin: 0%;
+        grid-area: title;
+        height:100%;
+    }
+    .project-item-date{
+        display: flex;
+        grid-area: date;
+        height: 100%;
+        padding: 0%;
+        margin: 0%;
+        font-size: 2.8vh;
+    }
+    .project-item-language{
+        display: flex;
+        height: 100%;
+        grid-area: language;
+        padding: 0%;
+        margin: 0%;
+        font-size: 2.7vh;
+    }
+    .project-item-languagedetail{
+        display: flex;
+        height: 100%;
+        grid-area: languagedetail;
+        font-size: 2vh;
+        margin: 0%;
+    }
+    .project-item-description{
+        display: flex;
+        height: 100%;
+        grid-area: description;
+        padding: 3%;
+        margin: 0%;
+        font-size: 3vh;
+    }
+
+}
+.project-item-left-column{
+    grid-area: left-column;
+    display:grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas:
+        "thumb"
+        "links";
+    
+    .project-item-links-wrapper{
+        justify-content: center;
+        display:grid;
+        grid-template-columns: 0.33fr 0.33fr 0.33fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "project sole repo";
+        align-items: center;
+        padding: 3%;
+        font-family: 'Caveat';
+        font-size: 2em;
+        grid-area: links;
+        .project-item-link-wrapper{
+            display: flex;
+            justify-content: center;
+            grid-area: project;
+        }
+        .project-item-repo-link-wrapper{
+            display: grid;
+            justify-content: center;
+            grid-area: repo;
+        }
+        .link{
+            color: darkslategray;
+            text-decoration:none;
+            padding-top: 5%;
+            
+        }
+        
+        
+    }
+    .project-item-sole-link-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: sole;
+    }
+    .project-item-image{
+        display: flex;
+        grid-area: thumb;
+        width: 100%;
+        height: 100%;
+        padding: 1%;
+    }
+}

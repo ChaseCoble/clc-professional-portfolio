@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import image from "../helper/images/images/BillyB.jpg"
 
 export default function Error() {
     const navigate = useNavigate();
@@ -9,7 +10,8 @@ export default function Error() {
     
     return (
         <div id = "error-wrapper">
-            You have messed up! Turn around!
+            You bloody broke it chap! Go home!
+            <img src = {image} alt = "Billy Butcher from The Boys" />
             <button onClick = {handleOnClick}> Return to Home </button>
         </div>
     )

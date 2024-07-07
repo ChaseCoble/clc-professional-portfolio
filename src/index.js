@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/main.scss';
 import Root from './routes/root';
-
 import About from './routes/about';
 import Error from './routes/error';
-import MobilePortfolioDetail from './routes/MobilePortfolioDetail'
+import MobilePortfolioDetail from './routes/mobilePortfolioDetail';
 import ReactModal from 'react-modal';
 import MobileAbout from './routes/mobileAbout';
+import MobileContact from './routes/mobileContact';
 
 
 ReactModal.setAppElement('#root');
@@ -42,11 +42,19 @@ const router = createBrowserRouter([
     element: <MobilePortfolioDetail/>
   },
   {
+    path: "/m/contact",
+    element: <MobileContact />
+  },
+  {
     path: "/m/about",
     element: <MobileAbout/>
   },
   {
     path: "*",
+    element: <Error />
+  },
+  {
+    path: "/test",
     element: <Error />
   }
 ]);
@@ -54,7 +62,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <mobContext.Provider value = {IsMobile()}><RouterProvider router = {router} /></mobContext.Provider>
+    <mobContext.Provider value = {IsMobile()}>
+      <RouterProvider router = {router} />
+    </mobContext.Provider>
   </React.StrictMode>
 );
 

@@ -4,13 +4,14 @@
     grid-template-rows: 1fr;
     padding-left: 3%;
     padding-right: 5%;
+    height: 80vh;
 }
 #biography-blurb-mobile{
     display: flex;
     flex-direction: column;
     overflow: auto;
     width: 100%;
-    height: 100%;
+    height: 75vh;
     grid-area: 1/1/2/2;
     text-align: center;
     font-family: 'Caveat', cursive;
@@ -38,7 +39,12 @@
     grid-template-areas: 
         "header"
         "filterButtons"
-        "portfolioItems"
+        "portfolioItems";
+    height: 50vh;
+}
+#portfolio-wrapper-mobile{
+    display: flex;
+    height: 75vh;
 }
 .mobile-portfolio-header{
     grid-area: header;
@@ -93,7 +99,7 @@
     text-align: center;
     padding: 5px;
     color: #e1e4e8;
-    background-image: url("../../helper/images/backgrounds/darkpencilbackground.jpg");
+    background-image: url("../../../helper/images/backgrounds/darkpencilbackground.jpg");
     background-size: cover;
     background-position: center;
   }

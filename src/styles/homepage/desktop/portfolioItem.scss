@@ -1,9 +1,9 @@
 
-@import "../variables.scss";
+@import "../../variables.scss";
 
 .portfolio-item-wrapper{
     @include popover(fixed, $menu-background-color: #bdbdbd );
-    background-image: url("../../helper/images/backgrounds/bookspine.png");
+    background-image: url("../../../helper/images/backgrounds/bookspine.png");
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,7 +73,7 @@
 }
 
 .plaque-contents{
-    background-image: url("../../helper/images/backgrounds/lightpencilbackground.jpg");
+    background-image: url("../../../helper/images/backgrounds/lightpencilbackground.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: fill;
