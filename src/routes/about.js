@@ -1,5 +1,5 @@
 import React from "react";
-import TopBar from "../components/topbar/TopBar";
+import TopBar from "../components/topbar/topBar";
 import resumePath from "../helper/documents/ATS_RESUME.pdf";
 import aboutPicture from "../helper/images/biography/About.png"
 

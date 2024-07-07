@@ -18,14 +18,14 @@ export default function TopBar() {
                 <p id="name-tag">Chase Coble</p>
                 <div className="contact-link">
                     <div className="icon-wrapper">
-                        <FontAwesomeIcon icon={faPhone} className="clickable icon" href="tel:7852898817" />
-                        <FontAwesomeIcon icon={faMessage} className="clickable icon" href="sms:7852898817" />
+                        <FontAwesomeIcon icon={faPhone} className="clickable icon" href="tel:7853975295" />
+                        <FontAwesomeIcon icon={faMessage} className="clickable icon" href="sms:7853975295" />
                     </div>
-                    <p>785-289-8817</p>
+                    <p>785-397-5295</p>
                 </div>
                 <div className="contact-link">
                     <div className="icon-wrapper">
-                        <FontAwesomeIcon icon={faEnvelope} className="clickable icon" href="mailto:coblexdevelopment@gmail.com" />
+                        <FontAwesomeIcon icon={faEnvelope} className="clickable icon" href="mailto:chasecobledevelopment@gmail.com" />
                     </div>
                     <p>chasecobledevelopment@gmail.com</p>
                 </div>
