@@ -1,72 +1,79 @@
 .project-item-right-column{
     display: grid;
-    width: 100%;
+    width: 40dvw;
     grid-area: right-column;
-    height: 100%;
+    height: 80dvh;
     text-align: center;
     justify-content: center;
-    padding: 5%;
+    padding: 2%;
     font-family: "Indie Flower", cursive;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 7.5fr;
+    grid-template-rows: 0fr 0fr 0fr 0fr 7.5fr;
     grid-template-areas:
         "title"
         "date"
         "language"
         "languagedetail"
         "description";
+   
+   
+
     .project-item-title{
         display: flex;
         font-size: 3vh;
-        padding: 0%;
+        padding: 1%;
         margin: 0%;
         grid-area: title;
-        height:100%;
+        height:6dvh;
+
     }
     .project-item-date{
         display: flex;
         grid-area: date;
-        height: 100%;
-        padding: 0%;
+        height: 6dvh;
+        padding: 1%;
         margin: 0%;
         font-size: 2.8vh;
     }
     .project-item-language{
         display: flex;
-        height: 100%;
+        height: 6dvh;
         grid-area: language;
-        padding: 0%;
+        padding: 1%;
         margin: 0%;
         font-size: 2.7vh;
+
     }
     .project-item-languagedetail{
         display: flex;
-        height: 100%;
+        height: 6dvh;
         grid-area: languagedetail;
-        font-size: 2vh;
+        font-size: 3vh;
         margin: 0%;
+        padding: 1%;
     }
     .project-item-description{
         display: flex;
-        height: 100%;
+        height: 50dvh;
         grid-area: description;
         padding: 3%;
         margin: 0%;
         font-size: 3vh;
+        box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+        overflow-y: auto;
     }
 
 }
 .project-item-left-column{
     grid-area: left-column;
     display:grid;
-    width: 100%;
-    height: 100%;
+    width: 35dvw;
+    height: 74dvh;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 2.5fr 1fr;
     grid-template-areas:
         "thumb"
         "links";
-    
     .project-item-links-wrapper{
         justify-content: center;
         display:grid;
@@ -75,7 +82,6 @@
         grid-template-areas:
             "project sole repo";
         align-items: center;
-        padding: 3%;
         font-family: 'Caveat';
         font-size: 2em;
         grid-area: links;
@@ -107,8 +113,10 @@
     .project-item-image{
         display: flex;
         grid-area: thumb;
-        width: 100%;
-        height: 100%;
-        padding: 1%;
+        align-items: center;
+        justify-content: center;
+        padding: 2%;
+        height: auto;
+        max-width: 100%;
     }
 }
