@@ -2,15 +2,14 @@ import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
-import ArticleItem from "./articleItem";
-import ProjectItem from "./projectItem";
-import DataScienceItem from "./datascienceItem";
-import Error from "../../routes/error";
+import iframeItem from "./iframeItem";
+import twoColumnItem from "./twoColumnItem";
+
 
 
 
 export default function PortfolioItem(props) {
-  const { title, description, category, imgURL, volId, leftMarginConstant} = props.item;
+  const { title, description, category, imgURL, volId, leftMarginConstant, iframe} = props.item;
   const [isOpen, setIsOpen] = useState(false);
   const mediaMatch = window.matchMedia('(max-aspect-ratio : 1.05 )')
   const [matches, setMatches ] = useState(mediaMatch.matches);
@@ -106,20 +105,8 @@ export default function PortfolioItem(props) {
             <div className = "portfolio-item-modal-exit">
                 <span style={{color: 'inherit'}} onClick = {closeModal} className = "clickable" ><FontAwesomeIcon icon={faXmarkSquare}  /></span>
             </div>
-            {(() => {
-              switch (category) {
-                case "Web":
-                case "Software":
-                  return <ProjectItem item={props.item} />;
-                case "Articles":
-                  return <ArticleItem item={props.item} />;
-                case "Data":
-                  return <DataScienceItem item={props.item} />;
-                default:
-                  return <Error item={props.item} />;
-              }
-              }
-            )()
+            {
+            iframe ? <iframeItem props = {props.item} /> : <twoColumnItem props = {props.item} />
           }
              
         </div>  

@@ -61,7 +61,7 @@ export default function PortfolioContainer() {
             break;
           case "Articles":
             leftMarginConstant = datascienceComparator;
-            softwareComparator = datascienceComparator + 1;
+            datascienceComparator = datascienceComparator + 1;
             volId = datascienceComparator;
             portfolioItem.leftMarginConstant = leftMarginConstant;
             portfolioItem.volId = volId;

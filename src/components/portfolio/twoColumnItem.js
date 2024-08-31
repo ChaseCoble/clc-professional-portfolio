@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 
-export default function ProjectItem(props){
+export default function twoColumnItem(props){
     const { title, description, imgURL, repoURL, projectURL, language, languagedetail, date} = props.item;
     return(
         <Fragment>

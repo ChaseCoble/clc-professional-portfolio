@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ArticleItem(props){
+export default function iframeItem(props){
     const { title, description, projectURL, language, date} = props.item;
     return(
         <div className = "article-item-wrapper">
