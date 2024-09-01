@@ -55,6 +55,10 @@ const router = createBrowserRouter([
     element: <Error />
   },
   {
+    path: "/error/:errorkey",
+    element: <Error />
+  },
+  {
     path: "/test",
     element: <LoadingScreen />
   }

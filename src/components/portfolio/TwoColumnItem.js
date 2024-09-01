@@ -1,7 +1,9 @@
 import React from "react";
 import { Fragment } from "react";
 
-export default function ProjectItem(props){
+export default function TwoColumnItem(props){
+    console.log(props);
+    console.log("Two column init");
     const { title, description, imgURL, repoURL, projectURL, language, languagedetail, date} = props.item;
     return(
         <Fragment>
