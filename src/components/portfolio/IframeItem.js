@@ -3,8 +3,6 @@ import LoadingScreen from "../loading";
 import IFrameWithLoader from "./IFrameWithLoader";
 
 const IframeItem = ({props}) =>{
-    console.log(props);
-    console.log("Iframe init");
     if(!props){
         return <LoadingScreen />
     }

@@ -66,7 +66,7 @@ export default function PortfolioContainer() {
             portfolioItem.leftMarginConstant = leftMarginConstant;
             portfolioItem.volId = volId;
             break;  
-          default: console.log("Error modifying properties on portfolioItems", portfolioItems)
+          default: ("Error modifying properties on portfolioItems", portfolioItems)
 
         }
       }
