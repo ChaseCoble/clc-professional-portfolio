@@ -6,8 +6,6 @@ export default function IFrameWithLoader(props){
     const handleLoad = () => {
         setIsLoading(false)
     }
-    console.log("SRC IS")
-    console.log(props.src)
     const localSrc = props.src
     return (
         <Fragment>
@@ -21,6 +19,7 @@ export default function IFrameWithLoader(props){
                 onLoad = {handleLoad}
                 style={{ display: isLoading ? 'none' : 'flex'}}
                 />
+            <a href= {localSrc} className = "article-visit-link">Visit the Application Here</a>
         </Fragment>
     )
 }

@@ -53,6 +53,9 @@ export default function About() {
                                     <div className="about-online-link">
                                         <a href="https://github.com/ChaseCoble">Github</a>
                                     </div>
+                                    <div className="about-online-link">
+                                        <a href="https://learn.microsoft.com/en-us/users/chasecobledevelopment/transcript/7xrq8bxq123e69k">Microsoft Learn Transcript</a>
+                                    </div>
                                     <div className = "about-resume-wrapper about-online-link">
                                         <a href={resumePath} download="ChaseCobleResume.pdf" className="menu">
                                             Download Resume

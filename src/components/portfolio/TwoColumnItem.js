@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 
-export default function TwoColumnItem(props){
+const TwoColumnItem = ({props}) =>{
     console.log(props);
     console.log("Two column init");
     const { title, description, imgURL, repoURL, projectURL, language, languagedetail, date} = props.item;
@@ -12,7 +12,7 @@ export default function TwoColumnItem(props){
                 <p className = "project-item-date">{date}</p>
                 <p className = "project-item-language">{language}</p>
                 <p className = "project-item-languagedetail">{languagedetail}</p>
-                <p className = "project-item-description">{description}</p>
+                <p className = "project-item-description description-box">{description}</p>
             </div>
             <div className = "project-item-left-column">
                 <div className = "project-item-links-wrapper">
@@ -38,3 +38,4 @@ export default function TwoColumnItem(props){
         </Fragment>
     )
 }
+export default TwoColumnItem;

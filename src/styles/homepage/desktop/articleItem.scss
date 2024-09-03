@@ -11,15 +11,27 @@
     .article-item-content{
         display: flex;
         grid-area: article;
-        height: 100%;
-        width: 100%;
+        height: 78dvh;
+        width: 40dvw;
         justify-content: center;
         align-items: center;
+        background-color: transparent;
+        flex-direction: column;
+        overflow: hidden;
         .article-content-frame{
             display: flex;
-            width: 100%;
-            height: 100%;
+            width: 36dvw;
+            height: 75dvh;
             margin-bottom: 3%;
+            overflow: hidden;
+        }
+        .article-visit-link{
+            color: black;
+            font-family: 'Caveat', cursive;
+            font-weight: 600;
+            padding: 1%;
+            border: solid 0.5px black;
+            font-size: 1.5rem;
         }
     }
     .article-item-info{

@@ -18,9 +18,10 @@ const IframeItem = ({props}) =>{
                 <div className = "article-item-title">{title}</div>
                 <div className = "article-item-date">{date}</div>
                 <div className = "article-item-language">{language}</div>
-                <div className = "article-item-description"> 
+                <div className = "article-item-description description-box"> 
                     {category === "Articles" ? 
                         <p>For more controls, use the 3 dots in the frame.</p> :
+                        category === "Web" ? "" :
                         <p>Click execute/run then interact with the script in the console</p>
                     }
                     <p>{description}</p>

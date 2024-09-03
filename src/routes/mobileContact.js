@@ -13,8 +13,8 @@ export default function MobileContact(){
                 <p id="mobile-name-tag">Chase Coble</p>
                 <div className="mobile-contact-link">
                     <div className="mobile-icon-wrapper">
-                        <a className="clickable" style={{color: 'inherit'}} href="tel:7853795295"><FontAwesomeIcon icon={faPhone} /></a>
-                        <a className="clickable" href="sms:7853795295" style={{color: 'inherit'}}><FontAwesomeIcon icon={faMessage}  /></a>
+                        <a className="clickable" style={{color: 'inherit'}} href="tel:7853973136"><FontAwesomeIcon icon={faPhone} /></a>
+                        <a className="clickable" href="sms:7853973136" style={{color: 'inherit'}}><FontAwesomeIcon icon={faMessage}  /></a>
                     </div>
                     <p>785-379-5295</p>
                 </div>

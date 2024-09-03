@@ -21,7 +21,7 @@ export default function TopBar() {
                         <FontAwesomeIcon icon={faPhone} className="clickable icon" href="tel:7853975295" />
                         <FontAwesomeIcon icon={faMessage} className="clickable icon" href="sms:7853975295" />
                     </div>
-                    <p>785-397-5295</p>
+                    <p>785-397-3136</p>
                 </div>
                 <div className="contact-link">
                     <div className="icon-wrapper">

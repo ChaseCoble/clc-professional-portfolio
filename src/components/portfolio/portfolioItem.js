@@ -10,8 +10,6 @@ import DataScienceItem from "./DataScienceItem";
 
 export default function PortfolioItem(props) {
   const { title, description, category, imgURL, volId, iframe, leftMarginConstant} = props.item;
-  console.log("Portfolio Item props init ");
-  console.log(props);
   const [isOpen, setIsOpen] = useState(false);
   const mediaMatch = window.matchMedia('(max-aspect-ratio : 1.05 )')
   const [matches, setMatches ] = useState(mediaMatch.matches);
